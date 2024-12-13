@@ -1,0 +1,63 @@
+export const SERVICES = [
+    {
+        id: 1,
+        image: 'images/industries1.jpg',
+        iconClass: 'bg-blue-500',
+        iconPath: 'M3 10h11M9 21l-6-6 6-6m12 6h-4m4 0l-4-4m4 4l-4 4',
+        title: 'Industries',
+        description: 'Notre expertise couvre plusieurs secteurs industriels, notamment l\'agroalimentaire, la pharmacie et la métallurgie. Nous proposons des solutions adaptées aux défis spécifiques de chaque secteur, permettant aux entreprises d\'atteindre l\'excellence opérationnelle et une croissance durable. Notre équipe de professionnels garantit une intégration fluide des technologies et pratiques innovantes, répondant aux besoins particuliers de chaque industrie.',
+        items: [
+            'Agroalimentaire',
+            'Chimie / Parachimie',
+            'Industrie pharmaceutique',
+            'Métallurgie / Travail du métal',
+            'Machines et équipements / Automobile',
+        ],
+    },
+    {
+        id: 2,
+        image: 'images/constructions.jpg',
+        iconClass: 'bg-green-500',
+        iconPath: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z',
+        title: 'Construction et Matériaux',
+        description: 'Nous offrons des solutions innovantes dans les industries de la construction et des matériaux, en mettant l\'accent sur la durabilité et l\'efficacité. En exploitant des méthodologies avancées et des matériaux respectueux de l\'environnement, nous aidons les entreprises à respecter les normes réglementaires et à améliorer les résultats de leurs projets. Notre expertise inclut la conception structurelle, la gestion des ressources et les stratégies de réduction des déchets adaptées aux exigences modernes.',
+        items: [
+            'BTP / Matériaux de construction',
+            'Bois / Papier / Carton / Imprimerie',
+            'Plastique / Caoutchouc',
+        ],
+    },
+    {
+        id: 3,
+        image: 'images/business-consulting.jpg',
+        iconClass: 'bg-red-500',
+        iconPath: 'M3 4a2 2 0 012-2h14a2 2 0 012 2H5a2 2 0 01-2-2V4z',
+        title: 'Services aux Entreprises',
+        description: 'Nos services aux entreprises englobent le conseil, la distribution et des solutions d\'entreprise conçues pour améliorer l\'efficacité opérationnelle. Avec une approche centrée sur le client, nous fournissons des analyses exploitables et des solutions évolutives qui favorisent la croissance et simplifient les processus. De l\'analyse de marché à l\'optimisation de la chaîne d\'approvisionnement, nous sommes votre partenaire pour un succès mesurable.',
+        items: [
+            'Études et Conseils',
+            'Services d\'entreprises',
+            'Distribution',
+            'Commerce / Négoce',
+        ],
+    },
+    {
+        id: 4,
+        image: 'images/fashion_textile.jpg',
+        iconClass: 'bg-yellow-500',
+        iconPath: 'M17 9V7a4 4 0 10-8 0v2m12 0v10a2 2 0 01-2 2H7a2 2 0 01-2-2V9h14z',
+        title: 'Textile et Mode',
+        description: 'Nous excellons dans l\'industrie du textile et de la mode, en proposant des solutions de pointe pour la conception, la production et la distribution. Nos services soutiennent des pratiques durables, des designs innovants et des flux de production efficaces, permettant aux entreprises de rester compétitives tout en répondant aux préférences changeantes des consommateurs.',
+        items: ['Textile / Habillement', 'Chaussures'],
+    },
+    {
+        id: 5,
+        image: 'images/supply_chain.jpg',
+        iconClass: 'bg-purple-500',
+        iconPath: 'M7 8h10M7 16h10M5 12h14M12 4v16',
+        title: 'Logistique et Transport',
+        description: 'Nos services de logistique et de transport garantissent une gestion fluide des chaînes d\'approvisionnement grâce à des technologies avancées. De la gestion des frets à l\'optimisation des itinéraires, nous proposons des solutions complètes qui réduisent les coûts et améliorent les délais de livraison. Notre engagement envers l\'innovation et la fiabilité aide les entreprises à atteindre leurs objectifs stratégiques et opérationnels.',
+        items: ['Transport / Logistique'],
+    },
+  ];
+  

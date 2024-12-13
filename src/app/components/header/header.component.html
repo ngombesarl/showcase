@@ -1,13 +1,43 @@
 <header class="bg-blue-600 text-white sticky top-0 z-50">
-    <div class="container mx-auto flex justify-between items-center p-4">
-      <div class="flex items-center">
-        <img src="logo.jpg" alt="Ngombe SARL" class="h-12 mr-4">
+    <div class="desktop-menu hidden container  mx-auto md:flex justify-between items-center p-4">
+      <a href="/" class="flex items-center">
+        <img src="logos/ngombe.jpg" alt="Ngombe SARL" class="h-12 mr-4">
         <h1 class="text-3xl font-bold">Ngombe SARL</h1>
-      </div>
+      </a>
       <nav class="space-x-6">
         <a href="#services" class="hover:text-blue-300">Services</a>
-        <a href="about.html" class="hover:text-blue-300">À Propos</a>
-        <a href="contact.html" class="hover:text-blue-300">Contact</a>
+        <a href="#about" class="hover:text-blue-300">À Propos</a>
+        <a href="#contact" class="hover:text-blue-300">Contact</a>
       </nav>
     </div>
+
+    <div class="fixed left-0 top-4 z-50 md:hidden w-full flex items-center justify-between px-8">
+      <!-- <div class="w-[70px] h-[70px] rounded-full"> -->
+      <div class="w-[70px] h-[70px]">
+        <img src="logos/ngombe.jpg" alt="logo ngombe" [ngClass]="{'hidden' : isOpen}" class="w-full h-full rounded-full object-cover">
+      </div>
+      <button 
+        (click)="toggleSidebar()"
+        class="hamburger menu-btn-side" 
+        [ngClass]="{'open' : isOpen}"
+        id="menu-btn-side">
+        <span class="hamburger-top"></span>
+        <span class="hamburger-middle"></span>
+        <span class="hamburger-bottom"></span>
+      </button>
+    </div>
+
+    <sidebar 
+      class="capitalize z-40 mobile-menu fixed right-0 top-0 flex flex-col items-center pt-8 h-screen w-[90vw] sm:w-[70vw] bg-blue-500/50 backdrop-blur-md transition-transform duration-1000" 
+      [ngClass]="{'translate-x-0': isOpen, 'translate-x-full': !isOpen}"
+    > 
+      <div class="w-[70px] h-[70px]">
+        <img src="logos/ngombe.jpg" alt="logo ngombe" [ngClass]="{'hidden' : !isOpen}" class="w-full h-full rounded-full object-cover">
+      </div>
+      <nav class="flex flex-col w-full justify-center items-center mt-8 gap-2">
+        <a (click)="toggleSidebar()" href="#services" class="hover:text-blue-300 text-3xl">Services</a>
+        <a (click)="toggleSidebar()" href="#about" class="hover:text-blue-30 text-3xl">À Propos</a>
+        <a (click)="toggleSidebar()" href="#contact" class="hover:text-blue-300 text-3xl">Contact</a>
+      </nav>
+  </sidebar>
   </header>
