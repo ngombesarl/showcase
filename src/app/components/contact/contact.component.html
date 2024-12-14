@@ -7,22 +7,22 @@
     <!-- Contact Section -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
     <!-- Contact Information -->
-            <div class="bg-white/70 backdrop-blur-md shadow-lg rounded-xl h-fit p-8">
+            <div class="bg-white/70 backdrop-blur-md shadow-lg rounded-xl h-fit w-fit p-8">
                 <h3 class="text-xl font-semibold text-gray-800 mb-6">Informations de contact</h3>
                 <div class="space-y-4">
-                    <div class="flex items-center justify-center">
-                        <div class="w-10 h-10 bg-blue-500 text-white flex items-center justify-center rounded-full shadow-md">
+                    <div class="flex items-center justify-start flex-wrap md:flex-nowrap ">
+                        <p class="w-10 h-10 bg-blue-500 text-white flex items-center justify-center rounded-full shadow-md">
                             <fa-icon [icon]="faLocation"></fa-icon>
-                        </div>
+                        </p>
                         <p class="ml-4 text-gray-700">PK10, Tours Jumelles, face boulangerie saker, Douala, Cameroun</p>
                     </div>
-                    <div class="flex items-center">
+                    <div class="flex items-center flex-wrap md:flex-nowrap ">
                         <p class="w-10 h-10 bg-green-500 text-white flex items-center justify-center rounded-full shadow-md">
                             <fa-icon [icon]="faEmail"></fa-icon> 
                         </p>
                         <p class="ml-4 text-gray-700">contact callcenter&#64;ngombe.org</p>
                     </div>
-                    <div class="flex items-center">
+                    <div class="flex items-center flex-wrap md:flex-nowrap ">
                         <p class="w-10 h-10 bg-red-500 text-white flex items-center justify-center rounded-full shadow-md">
                             <fa-icon [icon]="faPhone"></fa-icon> 
                         </p>
@@ -57,7 +57,7 @@
     </div>
     <!-- Map Section -->
     <div class="mt-16 w-full flex flex-col items-center font-semibold gap-4">
-        <p class="text-gray-800 text-3xl capitalize">
+        <p class="text-gray-800 text-3xl text-center capitalize">
            Comment nous trouver ?
         </p>
         <iframe class="w-full h-96 rounded-xl shadow-lg"

@@ -5,7 +5,7 @@ import { SERVICES } from '../data/services.data';
   providedIn: 'root'
 })
 export class ServicesService {  
-    private services = SERVICES;
+    private services = SERVICES;  
   
     constructor() {}
   
