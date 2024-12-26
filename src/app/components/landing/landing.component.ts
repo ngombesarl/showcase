@@ -4,15 +4,16 @@ import { HeroComponent } from '../hero/hero.component';
 import { OurServicesComponent } from '../our-services/our-services.component';
 import { ContactComponent } from '../contact/contact.component';
 import { FooterComponent } from '../footer/footer.component';
+import { HomeComponent } from '../home/home.component';
 
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [ HeaderComponent, 
+  imports: [
             HeroComponent, 
             OurServicesComponent, 
             ContactComponent, 
-            FooterComponent
+            HomeComponent
           ],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss'
