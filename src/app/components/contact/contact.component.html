@@ -1,5 +1,5 @@
 <section class="bg-gray-200 py-16">
-    <div class="container mx-auto px-6 lg:px-20">
+    <div class="container mx-auto md:px-6 lg:px-20">
         <h2 class="text-3xl font-extrabold text-center text-gray-800 mb-10">Contactez-Nous</h2>
         <p class="text-center text-gray-600 mb-16">
             Nous sommes là pour répondre à toutes vos questions et vous accompagner. N'hésitez pas à nous contacter !
@@ -10,6 +10,13 @@
             <div class="bg-white/70 backdrop-blur-md shadow-lg rounded-xl h-fit w-fit p-8">
                 <h3 class="text-xl font-semibold text-gray-800 mb-6">Informations de contact</h3>
                 <div class="space-y-4">
+                    <div>
+                        <h1 class="text-3xl flex items-end justify-start flex-wrap md:flex-nowrap">
+                            <fa-icon [icon]="faBuilding" class="text-primary text-7xl"></fa-icon>
+                            Ngombe Sarl
+                        </h1>
+                        <p class="text-lg font-semibold italic text-gray-700 tracking-wide">Nous et le plus grand nombre</p>                 
+                    </div>
                     <div class="flex items-center justify-start flex-wrap md:flex-nowrap ">
                         <p class="w-10 h-10 bg-blue-500 text-white flex items-center justify-center rounded-full shadow-md">
                             <fa-icon [icon]="faLocation"></fa-icon>
@@ -28,6 +35,13 @@
                         </p>
                         <p class="ml-4 text-gray-700">(+237) 652 751 999</p>
                     </div>
+
+                    <a href="https://www.ngombe.org" class="flex items-center flex-wrap md:flex-nowrap ">
+                        <p class="w-10 h-10 bg-blue-400 text-white flex items-center justify-center rounded-full shadow-md">
+                            <fa-icon [icon]="faGlobe"></fa-icon> 
+                        </p>
+                        <p class="ml-4 text-gray-700">www.ngombe.org</p>
+                    </a>
                 </div>
             </div>
     <!-- Contact Form -->
