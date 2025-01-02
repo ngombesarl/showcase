@@ -15,7 +15,8 @@ module.exports = {
         '3xl': '1800px', // Your custom size
       },
       colors: {
-        primary: '#00AEEF', 
+        primary: '#05bdfa',
+        initial: '#00AEEF', 
         secondary: '#f5f5f5'
       }
     },
