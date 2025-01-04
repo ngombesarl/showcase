@@ -14,4 +14,13 @@ export class HeaderComponent {
   toggleSidebar() {
     this.isOpen = !this.isOpen;
   }
+
+  links = [
+    {anchor: 'home',name: 'Acceuil'},
+    {anchor: 'ingenierie',name: 'Ingénierie'},
+    {anchor: 'produits',name: 'Produits'},
+    {anchor: 'services',name: 'Services'},
+    {anchor: 'about-us',name: 'A propos'},
+    {anchor: 'contact',name: 'Contact'},
+  ]
 }
