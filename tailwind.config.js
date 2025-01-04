@@ -16,6 +16,7 @@ module.exports = {
       },
       colors: {
         primary: '#00b2fa',
+        chartColor: '#05bdfa',
         initial: '#00AEEF', 
         secondary: '#f5f5f5'
       }
