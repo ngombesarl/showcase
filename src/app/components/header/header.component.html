@@ -5,8 +5,11 @@
         <h1 class="text-3xl font-bold">Ngombe SARL</h1>
       </a>
       <nav class="space-x-6">
+        <a href="#home" class="hover:text-blue-600">Acceuil</a>
+        <a href="#ingenierie" class="hover:text-blue-600">Ingénierie</a>
+        <a href="#produits" class="hover:text-blue-600">Produits</a>
         <a href="#services" class="hover:text-blue-600">Services</a>
-        <a href="#contact" class="hover:text-blue-600">À Propos</a>
+        <a href="#about-us" class="hover:text-blue-600">A propos</a>
         <a href="#contact" class="hover:text-blue-600">Contact</a>
       </nav>
     </div>
@@ -34,10 +37,13 @@
       <div class="w-[70px] h-[70px]">
         <img src="logos/ngombe.jpg" alt="logo ngombe" [ngClass]="{'hidden' : !isOpen}" class="w-full h-full rounded-full object-cover">
       </div>
-      <nav class="flex flex-col w-full justify-center items-center mt-8 gap-2">
-        <a (click)="toggleSidebar()" href="#services" class="hover:text-blue-300 text-3xl">Services</a>
-        <a (click)="toggleSidebar()" href="#contact" class="hover:text-blue-300 text-3xl">À Propos</a>
-        <a (click)="toggleSidebar()" href="#contact" class="hover:text-blue-300 text-3xl">Contact</a>
+      <nav class="flex flex-col w-full justify-center items-center mt-8 gap-4">
+        <a (click)="toggleSidebar()" href="#home" class="hover:text-blue-300 text-4xl">Acceuil</a>
+        <a (click)="toggleSidebar()" href="#ingenierie" class="hover:text-blue-300 text-4xl">Ingénierie</a>
+        <a (click)="toggleSidebar()" href="#produits" class="hover:text-blue-300 text-4xl">Produits</a>
+        <a (click)="toggleSidebar()" href="#services" class="hover:text-blue-300 text-4xl">Services</a>
+        <a (click)="toggleSidebar()" href="#about-us" class="hover:text-blue-300 text-4xl">A propos</a>
+        <a (click)="toggleSidebar()" href="#contact" class="hover:text-blue-300 text-4xl">Contact</a>
       </nav>
   </sidebar>
   </header>
