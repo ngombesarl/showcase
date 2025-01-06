@@ -72,7 +72,7 @@ background: url("../../public/images/app/phone_logo.png");
 .menu-btn-side .hamburger-top,
 .menu-btn-side .hamburger-middle,
 .menu-btn-side .hamburger-bottom{
-background: gray;
+background: black;
 }
 
 .glass {
@@ -80,3 +80,25 @@ background: gray;
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
+
+.section_title {
+  position: relative;
+}
+
+.section_title::after{
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%,-50%);
+  content: '';
+  width: 150px;
+  height: 4px;
+  background-color: rgb(0, 0, 75);
+  transition: .5s ;
+}
+
+.section_title:hover::after{
+  width: 50%;
+}
+

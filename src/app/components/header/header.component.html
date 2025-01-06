@@ -16,15 +16,17 @@
       <a href="/" class="w-[70px] h-[70px]">
         <img src="logos/ngombe.jpg" alt="logo ngombe" [ngClass]="{'hidden' : isOpen}" class="w-full h-full rounded-full object-cover">
       </a>
-      <button 
+      <div class="bg-white rounded-full">
+        <button 
         (click)="toggleSidebar()"
-        class="hamburger menu-btn-side" 
+        class="hamburger menu-btn-side bg-black" 
         [ngClass]="{'open' : isOpen}"
         id="menu-btn-side">
         <span class="hamburger-top"></span>
         <span class="hamburger-middle"></span>
         <span class="hamburger-bottom"></span>
       </button>
+      </div>
     </div>
 
     <sidebar 

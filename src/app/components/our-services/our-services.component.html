@@ -2,7 +2,7 @@
 
 <div class="w-full py-[50px]">
   <section id="cta" 
-      style="background: linear-gradient(to bottom, rgba(0, 0, 255, 0.332), rgba(0, 0, 255, 0.325)), url('/images/business-consulting.jpg') fixed; background-size: cover; background-position: center;" 
+      style="background: linear-gradient(to bottom, rgba(0, 0, 255, 0.332), rgba(0, 0, 255, 0.325)), url('/images/business-consulting.jpg') ; background-attachment: scroll; background-size: cover; background-position: center;" 
       class="py-28 text-white text-center"
     >
     <div class="container mx-auto">
@@ -21,7 +21,7 @@
 
 <section class="bg-gray-50 py-16">
     <div class="container mx-auto md:px-6 lg:px-20">
-      <h2 class="text-4xl font-bold text-center text-primary mb-12">
+      <h2 class="text-4xl font-bold text-center uppercase text-primary mb-12 section_title">
         Nos Services
       </h2>
       <p class="text-center text-gray-600 mb-16">
@@ -33,7 +33,7 @@
           class="rounded-xl shadow-lg hover:shadow-2xl p-6 transition hover:-translate-y-2"
         >
           <div class="rounded-xl pb-2 group overflow-hidden">
-            <img [src]="service.image" alt="" class="rounded-xl group-hover:scale-110 transition-transform duration-300">
+            <img loading="lazy" [src]="service.image" alt="" class="rounded-xl group-hover:scale-105 transition-transform duration-300">
           </div>
           <div class="flex items-center mb-4">
             <div 
