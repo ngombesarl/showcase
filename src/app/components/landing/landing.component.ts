@@ -6,16 +6,17 @@ import { ContactComponent } from '../contact/contact.component';
 import { FooterComponent } from '../footer/footer.component';
 import { HomeComponent } from '../home/home.component';
 import { CommingSoonComponent } from "../comming-soon/comming-soon.component";
+import { PartnersComponent } from "../partners/partners.component";
 
 @Component({
   selector: 'app-landing',
   standalone: true,
   imports: [
-    HeroComponent,
     OurServicesComponent,
     ContactComponent,
     HomeComponent,
-    CommingSoonComponent
+    CommingSoonComponent,
+    PartnersComponent
 ],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss'

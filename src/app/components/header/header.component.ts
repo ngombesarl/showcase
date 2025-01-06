@@ -20,6 +20,7 @@ export class HeaderComponent {
     {anchor: 'ingenierie',name: 'Ingénierie'},
     {anchor: 'produits',name: 'Produits'},
     {anchor: 'services',name: 'Services'},
+    {anchor: 'partners',name: 'Partenaires'},
     {anchor: 'about-us',name: 'A propos'},
     {anchor: 'contact',name: 'Contact'},
   ]

@@ -18,3 +18,12 @@ a::after {
 a:hover::after{
     width: 100%;
 }
+
+
+@media screen and (min-width: 500px) and (max-width: 1034px) {
+    header .desktop-menu{
+        // background: red;
+        flex-direction: column;
+        gap: 15px;
+    }
+}

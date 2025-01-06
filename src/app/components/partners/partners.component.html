@@ -1,0 +1,97 @@
+<!-- <section id="trusted-by" class="bg-gray-100 py-16">
+    <div class="container flex flex-col mx-auto px-4 md:px-6 lg:px-20">
+      <h2 class="text-4xl font-bold text-center  uppercase text-primary mb-12 section_title">
+        Ils nous font confiance
+      </h2>
+      <p class="text-center text-gray-600 mb-8">
+        Nous collaborons avec des partenaires de renom pour offrir des solutions d’ingénierie de qualité supérieure.
+      </p>
+  
+      <div 
+        class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center transition-all duration-500 ease-in-out overflow-hidden"
+        [style.max-height.px]="displayedPartnersCount * 100" 
+      >
+        @for(partner of partners | slice:0:displayedPartnersCount; track partner) {
+            <div  
+                class="p-4 text-center"
+            >
+                <img 
+                    [src]="partner.logo" 
+                    [alt]="partner.name" 
+                    class="mx-auto h-14 mb-2 shadow-lg hover:scale-105 transition duration-300"
+                >
+                <p class="text-md font-semibold text-gray-600">{{ partner.name }}</p>
+            </div>
+        }
+      </div>
+  
+      <div class="text-center mt-8 flex items-center justify-center">
+        @if(displayedPartnersCount < partners.length) {
+            <button 
+                (click)="showMore()" 
+                class="px-8 py-3 rounded-lg bg-gray-200 text-gray-800 font-medium transition duration-300 hover:bg-gray-300 flex items-center justify-center gap-2"
+                >
+                <span>Voir plus</span>
+                <fa-icon [icon]="faArrowDown"></fa-icon>
+            </button>
+        }
+  
+        @if(displayedPartnersCount > initialDisplayedCount){
+            <button
+                (click)="showLess()" 
+                class="px-8 py-3 rounded-lg bg-gray-200 text-gray-800 font-medium transition duration-300 hover:bg-gray-300 flex items-center justify-center gap-2 mt-4"
+                >
+                <span>Voir moins</span>
+                <fa-icon [icon]="faArrowUp"></fa-icon>
+            </button>
+        }
+      </div>
+    </div>
+  </section>
+   -->
+
+  <section id="trusted-by" class="bg-gray-100 py-16">
+    <div class="container flex flex-col mx-auto px-4 md:px-6 lg:px-20">
+      <h2 class="text-4xl font-bold text-center uppercase text-primary mb-12 section_title">
+        Ils nous font confiance
+      </h2>
+      <p class="text-center text-gray-600 mb-8">
+        Nous collaborons avec des partenaires de renom pour offrir des solutions d’ingénierie de qualité supérieure.
+      </p>
+  
+      <!-- Conteneur pour faire défiler les partenaires -->
+      <div class="relative">
+        <div 
+          #partnersContainer 
+          class="flex overflow-x-hidden space-x-8 pb-4 scroll-smooth hide-scrollbar"
+        >
+          @for(partner of partners; track partner) {
+            <div class="p-4 text-center min-w-max">
+              <img 
+                [src]="partner.logo" 
+                [alt]="partner.name" 
+                class="mx-auto h-14 mb-2 shadow-lg hover:scale-105 transition duration-300"
+              >
+              <p class="text-md font-semibold text-gray-600">{{ partner.name }}</p>
+            </div>
+          }
+        </div>
+  
+        <!-- Flèches gauche et droite -->
+        <button 
+          (click)="scrollPartners('left')" 
+          class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white w-10 h-10 rounded-full transition duration-300 hover:bg-gray-950"
+        >
+          <fa-icon [icon]="faArrowLeft"></fa-icon>
+        </button>
+
+        <button 
+          (click)="scrollPartners('right')" 
+          class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white w-10 h-10 rounded-full  transition duration-300 hover:bg-gray-950"
+        >
+          <fa-icon [icon]="faArrowRight"></fa-icon>
+        </button>
+      </div>
+    </div>
+  </section>
+  
