@@ -24,7 +24,6 @@ export class HomeComponent {
     {name: `Gestion du changement orienté processus`},
     {name: `Gestion de la communication autour de processus `},
     {name: `Gestion de la connaissance`},
-    {name: `Knowledge management`},
   ]
 
 }
