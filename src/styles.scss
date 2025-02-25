@@ -81,11 +81,11 @@ background: black;
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.section_title {
+.section_title, .sirh_title {
   position: relative;
 }
 
-.section_title::after{
+.section_title::after,.sirh_title::after{
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -94,11 +94,12 @@ background: black;
   content: '';
   width: 150px;
   height: 4px;
-  background-color: rgb(0, 0, 75);
+  // background-color: rgb(0, 0, 75);
+  background: #00b2fa;
   transition: .5s ;
 }
 
-.section_title:hover::after{
+.section_title:hover::after, .sirh_title:hover::after{
   width: 50%;
 }
 
