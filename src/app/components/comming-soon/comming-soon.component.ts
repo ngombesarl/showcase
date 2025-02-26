@@ -26,7 +26,7 @@ export class CommingSoonComponent {
   features: AppFeature[] = [
     {
       id: 1,
-      title: 'CVthèque',
+      title: 'Talent pool',
       description : 'Accédez à une base de données dynamique et fiable pour mettre en relation les bons profils avec les bonnes opportunités.',
       icon: this.faDatabase
     },
