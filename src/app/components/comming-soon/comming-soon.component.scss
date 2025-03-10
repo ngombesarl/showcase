@@ -1,5 +1,39 @@
-// #coming-soon {
-//     background: linear-gradient(to right,#7A2C39, #af4e6500), url('../../../../public/images/cvtheque_screen.png');
-//     backdrop-filter: blur(10px);
-//     filter: ;
-// }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-slide-in {
+    animation: slideIn 0.8s ease-out;
+}
+
+@keyframes pulseIcon {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.animate-pulse-icon {
+    animation: pulseIcon 2s infinite ease-in-out;
+}
+
+@keyframes pulseLight {
+    0%, 100% { transform: scale(1); opacity: 0.2; }
+    50% { transform: scale(1.2); opacity: 0.5; }
+}
+
+.animate-pulse-light {
+    animation: pulseLight 2s infinite ease-in-out;
+}
+
+.animate-pulse-slow {
+    animation: pulseLight 4s infinite ease-in-out;
+}

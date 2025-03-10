@@ -1,0 +1,38 @@
+<section id="produits" class="relative px-4 py-20 overflow-hidden text-white">
+  <div class="absolute inset-0 bg-center bg-cover" style="background-image: linear-gradient(to right, rgba(0, 45, 91, 0.8), rgba(0, 102, 153, 0.8)), url('images/cvtheque_screen.png');"></div>
+  <div class="absolute inset-0 bg-gradient-to-r from-[#002D5B] to-[#006699] opacity-70 animate-pulse-slow"></div>
+
+  <div class="relative z-10 mx-auto mt-5 text-center max-w-7xl">
+      <h1 class="mb-2 text-6xl font-extrabold sirh_title animate-fade-in">SIRH <span class="text-primary">NGOMBE</span></h1>
+      <h2 class="mb-8 text-3xl font-semibold animate-slide-in">Découvrez Notre Solution Complète <span class="text-4xl">4</span> en <span class="text-4xl">1</span></h2>
+      <p class="mb-4 text-xl">Avec le <strong class="font-bold">SIRH NGOMBE</strong>, vous bénéficiez d'une solution avancée pour améliorer la gestion et l'optimisation de vos processus métiers RH.</p>
+      <p class="mb-12 text-lg">Le <strong>SIRH NGOMBE</strong> est une solution évolutive, adaptative et interactive développée dans le but de fluidifier et de dématérialiser chaque processus d'administration du capital humain.</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12 text-[#002D5B]">
+          @for(feature of features; track feature.id) {
+          <div class="p-6 transition-transform duration-300 transform bg-white shadow-md rounded-xl hover:shadow-lg hover:scale-105">
+              <fa-icon class="mb-4 text-4xl text-primary animate-pulse-icon" [icon]="feature.icon"></fa-icon>
+              <h3 class="mb-2 text-2xl font-semibold">{{feature.title}}</h3>
+              <p class="text-gray-700">{{feature.description}}</p>
+          </div>
+          }
+      </div>
+
+      <h1 class="mb-8 text-4xl font-bold uppercase section_title animate-fade-in">Comming soon features</h1>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12 text-[#002D5B]">
+          @for(feature of commingSoonFeatures; track feature.id) {
+          <div class="p-6 transition-transform duration-300 transform bg-white shadow-md rounded-xl hover:shadow-lg hover:scale-105 blur-sm hover:blur-none">
+              <fa-icon class="mb-4 text-4xl text-gray-400" [icon]="feature.icon"></fa-icon>
+              <h3 class="mb-2 text-2xl font-semibold text-gray-500">{{feature.title}}</h3>
+              <p class="text-gray-400">{{feature.description}}</p>
+          </div>
+          }
+      </div>
+
+      <p class="mb-6 text-lg">Prêt à découvrir et utiliser nos solutions ? Accédez-y dès maintenant !</p>
+      <a href="https://sirhngombe.onpousse.com" target="_blank" class="relative px-8 py-4 overflow-hidden font-semibold text-white transition-shadow duration-300 rounded-full bg-gradient-to-r from-primary to-blue-600 hover:shadow-lg hover:scale-105">
+          Accéder au Service
+          <span class="absolute inset-0 bg-white rounded-full opacity-20 animate-pulse-light"></span>
+      </a>
+  </div>
+</section>

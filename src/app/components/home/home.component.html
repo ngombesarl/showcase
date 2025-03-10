@@ -1,14 +1,14 @@
-<section id="home_section" class="relative h-screen flex flex-col items-center justify-center bg-cover bg-center gap-1 px-4">
+<section id="home_section" class="relative flex flex-col items-center justify-center h-screen gap-1 px-4 bg-center bg-cover">
     <!-- Nom de l'entreprise -->
-    <p class="text-xl text-gray-300 italic font-light tracking-wide">
+    <p class="text-xl italic font-light tracking-wide text-gray-300">
         Ngombe Sarl
     </p>
     
     <!-- Slogan -->
-    <!-- <p class="text-xl text-gray-300 italic font-medium text-center">
+    <!-- <p class="text-xl italic font-medium text-center text-gray-300">
         Nous et le plus grand nombre
     </p> -->
-    <p class="text-primary text-center uppercase text-4xl md:text-6xl lg:text-8xl">
+    <p class="text-4xl text-center uppercase text-primary md:text-6xl lg:text-8xl">
         L'expertise d'ingénierie des processus d'affaires
     </p>  
     <!-- Main Heading
@@ -23,7 +23,7 @@
     
     <!-- Call-to-Action Button -->
     <a href="/#services" 
-       class="bg-primary py-3 px-8 rounded-lg text-white text-lg font-medium hover:bg-blue-700 transition-colors duration-300">
+       class="px-8 py-3 text-lg font-medium text-white transition-colors duration-300 rounded-lg bg-primary hover:bg-blue-700">
         Explorez Nos Services
     </a>
 </section>
@@ -31,73 +31,51 @@
 
 
 <section>
-    <section id="ingenierie" class="bg-white py-16">
-        <div class="container mx-auto px-2 md:px-6 lg:px-20">
-          <h2 class="text-4xl font-bold text-center uppercase text-primary mb-4 section_title">
+    <section id="ingenierie" class="py-16 bg-white">
+        <div class="container px-2 mx-auto md:px-6 lg:px-20">
+          <h2 class="mb-4 text-4xl font-bold text-center uppercase text-primary section_title">
             Ingénierie des processus d'affaires
           </h2>
-          <p class="text-center text-gray-600 mb-8">
+          <p class="mb-8 text-center text-gray-600">
             Découvrez nos solutions complètes pour l'ingénierie des processus d'affaires et la transformation de votre entreprise.
           </p>
           
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 justify-start items-center">
+          <div class="grid items-center justify-start grid-cols-1 gap-8 lg:grid-cols-2">
             <!-- Image Section -->
-            <div class="rounded-xl overflow-hidden shadow-lg group">
-              <img src="images/ingenierie1.jpg" alt="Ingénierie des processus d'affaires" class="rounded-xl group-hover:scale-110 transition-transform duration-300">
+            <div class="overflow-hidden shadow-lg rounded-xl group">
+              <img src="images/ingenierie1.jpg" alt="Ingénierie des processus d'affaires" class="transition-transform duration-300 rounded-xl group-hover:scale-110">
             </div>
       
             <!-- Content Section -->
             <div>
-              <h3 class="text-2xl font-semibold text-gray-800 mb-6">
+              <h3 class="mb-6 text-2xl font-semibold text-gray-800">
                 Ingénierie des Processus d'Affaires
               </h3>
-              <p class="text-gray-600 mb-4">
+              <p class="mb-4 text-gray-600">
                 Faites votre métier : production alimentaire, industrie métallurgique, services télécommunications, maintenance industrielle, etc.
               </p>
-              <p class="text-gray-600 mb-6">
+              <p class="mb-6 text-gray-600">
                 Nous nous occupons de la cartographie de vos processus, de la gestion documentaire, du pilotage de vos processus et de l’aide à la décision.
               </p>  
-
-              <div class=" mb-6">
-                <h3 class="text-2xl font-semibold text-gray-80 p-2 text-white bg-blue-800/80 shadow-lg  backdrop-blur-lg">
-                  Activités à mener
-                </h3>
-              </div>
-              <ul class="space-y-4">
-                @for(activity of activities; track activity) {
-                  <li class="flex items-start gap-3">
-                    <span class="w-6 h-6 text-white bg-primary rounded-full flex items-center justify-center flex-shrink-0">✓</span>
-                    <span>{{activity.name}}</span>
-                  </li>
-                }
-                <!-- <li class="flex items-start gap-3">
-                  <span class="w-6 h-6 text-white bg-primary rounded-full flex items-center justify-center flex-shrink-0">✓</span>
-                  <span>Durée : 1 mois gratuit offert</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="w-6 h-6 text-white bg-primary rounded-full flex items-center justify-center flex-shrink-0">✓</span>
-                  <span>Prix : par processus</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="w-6 h-6 text-white bg-primary rounded-full flex items-center justify-center flex-shrink-0">✓</span>
-                  <span>Attestation de conformité des processus d’affaires délivrée</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="w-6 h-6 text-white bg-primary rounded-full flex items-center justify-center flex-shrink-0">✓</span>
-                  <span>Bonus : ajout dans le référentiel mondial des entreprises certifiées</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="w-6 h-6 text-white bg-primary rounded-full flex items-center justify-center flex-shrink-0">✓</span>
-                  <span>Préparation à la certification de votre entreprise</span>
-                </li> -->
-              </ul>
-              
-      
-              <a href="/#contact" class="mt-8 inline-block px-10 py-4 rounded-lg bg-blue-600 text-white font-semibold transition duration-500 hover:bg-blue-700 hover:scale-105 transform">
-                Contactez-nous
-              </a>
             </div>
           </div>
+          <div class="my-4">
+            <h3 class="p-2 text-2xl font-semibold text-center text-white shadow-lg text-gray-80 bg-blue-800/80 backdrop-blur-lg">
+              Activités à mener
+            </h3>
+          </div>
+          <!-- <ul class="space-y-4"> -->
+            <div class="grid items-start justify-start grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 text-[#002D5B]">
+            @for(activity of activities; track activity) {
+              <li class="flex items-start gap-3">
+                <span class="flex items-center justify-center flex-shrink-0 w-6 h-6 text-white rounded-full bg-primary">✓</span>
+                <span>{{activity.name}}</span>
+              </li>
+            }
+          </div>  
+          <a href="/#contact" class="inline-block px-10 py-4 mt-4 font-semibold text-white transition duration-500 transform bg-blue-600 rounded-lg hover:bg-blue-700 hover:scale-105">
+            Contactez-nous
+          </a>
         </div>
       </section>
       
