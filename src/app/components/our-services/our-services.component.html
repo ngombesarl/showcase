@@ -3,13 +3,14 @@
 <div class="w-full py-[50px]">
   <section id="cta" 
       style="background: linear-gradient(to bottom, rgba(0, 0, 255, 0.332), rgba(0, 0, 255, 0.325)), url('/images/business-consulting.jpg') ; background-attachment: scroll; background-size: cover; background-position: center;" 
-      class="py-28 text-white text-center"
+      class="text-center text-white py-28"
     >
     <div class="container mx-auto">
-      <h2 class="text-4xl font-extrabold mb-6">Êtes-vous prêt à transformer votre entreprise ?</h2>
-      <p class="text-xl mb-8">Avec <strong>Ngombe Sarl</strong>, ouvrez la porte à de nouvelles opportunités et faites passer votre entreprise au niveau supérieur.</p>
-      <a href="https://www.cvtheque.ngombe.org" 
-          class="flex items center justify-center text-center w-fit mx-auto px-10 py-4 rounded-lg bg-blue-600 text-white font-semibold transition duration-500 hover:bg-blue-700 hover:scale-105 transform">
+      <h2 class="mb-6 text-4xl font-extrabold">Êtes-vous prêt à transformer votre entreprise ?</h2>
+      <p class="mb-8 text-xl">Avec <strong>Ngombe Sarl</strong>, ouvrez la porte à de nouvelles opportunités et faites passer votre entreprise au niveau supérieur.</p>
+      <a href="http://sirhngombe.onpousse.com" 
+          target="_blank"
+          class="flex justify-center px-10 py-4 mx-auto font-semibold text-center text-white transition duration-500 transform bg-blue-600 rounded-lg items center w-fit hover:bg-blue-700 hover:scale-105">
           Commencez dès maintenant
       </a>
     </div>
@@ -19,25 +20,25 @@
 
 
 
-<section class="bg-gray-50 py-16">
+<section class="py-16 bg-gray-50">
     <div class="container mx-auto md:px-6 lg:px-20">
-      <h2 class="text-4xl font-bold text-center uppercase text-primary mb-12 section_title">
+      <h2 class="mb-12 text-4xl font-bold text-center uppercase text-primary section_title">
         Nos Services
       </h2>
-      <p class="text-center text-gray-600 mb-16">
+      <p class="mb-16 text-center text-gray-600">
         Toutes les opérations commerciales, industrielles et financières rattachées directement ou indirectement à notre expertise multisectorielle.
       </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
         <div 
           *ngFor="let service of services" 
-          class="rounded-xl shadow-lg hover:shadow-2xl p-6 transition hover:-translate-y-2"
+          class="p-6 transition shadow-lg rounded-xl hover:shadow-2xl hover:-translate-y-2"
         >
-          <div class="rounded-xl pb-2 group overflow-hidden">
-            <img loading="lazy" [src]="service.image" alt="" class="rounded-xl group-hover:scale-105 transition-transform duration-300">
+          <div class="pb-2 overflow-hidden rounded-xl group">
+            <img loading="lazy" [src]="service.image" alt="" class="transition-transform duration-300 rounded-xl group-hover:scale-105">
           </div>
           <div class="flex items-center mb-4">
             <div 
-              class="w-12 h-12 text-white flex items-center justify-center rounded-full shadow-md" 
+              class="flex items-center justify-center w-12 h-12 text-white rounded-full shadow-md" 
               [ngClass]="service.iconClass"
             >
               <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -49,7 +50,7 @@
           <ul class="text-gray-600 space-y-2 min-h-[110px]">
             <li *ngFor="let item of service.items">- {{ item }}</li>
           </ul>
-          <a [routerLink]="['/service',service.id]" class="hover:underline flex items-center gap-2 bg-blue-900 text-white p-2 w-fit">
+          <a [routerLink]="['/service',service.id]" class="flex items-center gap-2 p-2 text-white bg-blue-900 hover:underline w-fit">
             <span>See more</span>
             <fa-icon [icon]="faArrowRight"></fa-icon>
           </a>
