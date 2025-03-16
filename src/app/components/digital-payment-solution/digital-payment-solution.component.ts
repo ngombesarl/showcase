@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faChartLine, faChartPie, faCoins, faGraduationCap, faHandHoldingUsd, faHandshake, faPalette, faPallet, faPiggyBank, faShoppingCart, faStore, faWallet } from '@fortawesome/free-solid-svg-icons';
+import { faChartLine, faChartPie, faCoins, faGraduationCap, faHandHoldingUsd, faHandshake, faPalette, faPallet, faPiggyBank, faShoppingCart, faStore, faUsers, faWallet } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-digital-payment-solution',
@@ -23,6 +23,7 @@ export class DigitalPaymentSolutionComponent {
   faChartPie = faChartPie;
   faGraduation = faGraduationCap;
   faCoins = faCoins;
+  faMultiUsers = faUsers;
 
   services = [
     { title: 'Dépôt', description: 'Effectuez des dépôts rapides et sécurisés en toute simplicité.', icon: this.faPiggyBank },
@@ -30,7 +31,7 @@ export class DigitalPaymentSolutionComponent {
     { title: 'Compte marchand', description: 'Gérez vos transactions professionnelles en toute sécurité.', icon: this.faStore},
     { title: 'Gestion de porte-monnaie électronique', description: 'Un portefeuille numérique sécurisé pour toutes vos opérations.', icon: this.faWallet },
     { title: 'Reporting', description: 'Suivez vos transactions avec des rapports détaillés et précis.', icon: this.faChartLine },
-    { title: 'Gestion multicomptes', description: 'Adaptez votre interface selon vos préférences.', icon: this.faPalette },
+    { title: 'Gestion multicomptes', description: 'Adaptez votre interface selon vos préférences.', icon: this.faMultiUsers },
     { title: 'Achat de produits et services', description: 'Payez vos achats en ligne de manière fluide et sécurisée.', icon: this.faShopingCart},
     { title: 'Tontine électronique', description: 'Participez à des tontines numériques et gérez vos cotisations.', icon: this.faHandShake },
     { title: 'Investissement', description: 'Boostez votre épargne avec des options d’investissement intelligentes.', icon: this.faChartPie },
