@@ -7,6 +7,7 @@ import { FooterComponent } from '../footer/footer.component';
 import { HomeComponent } from '../home/home.component';
 import { CommingSoonComponent } from "../comming-soon/comming-soon.component";
 import { PartnersComponent } from "../partners/partners.component";
+import { DigitalPaymentSolutionComponent } from "../digital-payment-solution/digital-payment-solution.component";
 
 @Component({
   selector: 'app-landing',
@@ -16,7 +17,8 @@ import { PartnersComponent } from "../partners/partners.component";
     ContactComponent,
     HomeComponent,
     CommingSoonComponent,
-    PartnersComponent
+    PartnersComponent,
+    DigitalPaymentSolutionComponent
 ],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss'
