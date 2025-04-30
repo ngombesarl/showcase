@@ -8,6 +8,8 @@ import { HomeComponent } from '../home/home.component';
 import { CommingSoonComponent } from "../comming-soon/comming-soon.component";
 import { PartnersComponent } from "../partners/partners.component";
 import { DigitalPaymentSolutionComponent } from "../digital-payment-solution/digital-payment-solution.component";
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { faBars, faCalendar, faMailBulk } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-landing',
@@ -17,8 +19,10 @@ import { DigitalPaymentSolutionComponent } from "../digital-payment-solution/dig
     ContactComponent,
     HomeComponent,
     CommingSoonComponent,
+    HeroComponent,
     PartnersComponent,
-    DigitalPaymentSolutionComponent
+    DigitalPaymentSolutionComponent,
+    FontAwesomeModule
 ],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss'

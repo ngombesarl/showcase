@@ -13,6 +13,13 @@ module.exports = {
         'xl': '1280px', // Default extra-large screen size
         '2xl': '1536px', // Default 2x extra-large screen size
         '3xl': '1800px', // Your custom size
+      }, 
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'], // 'Poppins' is the font family name you'll use in Tailwind classes
+      },
+      dropShadow: {
+        'header': '0 4px 4px hsla(0, 0%, 0%, 0.25)',
+        // You can add or override other drop shadows here if needed
       },
       colors: {
         primary: '#00b2fa',
