@@ -8,7 +8,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @Component({
   selector: 'app-our-services',
   standalone: true,
-  imports: [CommonModule,RouterModule,FontAwesomeModule],
+  imports: [RouterModule,FontAwesomeModule],
   templateUrl: './our-services.component.html',
   styles: ``
 })

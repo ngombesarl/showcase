@@ -1,6 +1,4 @@
-
-
-<div class="w-full py-[50px]">
+<!-- <div class="w-full py-[50px]">
   <section id="cta" 
       style="background: linear-gradient(to bottom, rgba(0, 0, 255, 0.332), rgba(0, 0, 255, 0.325)), url('/images/business-consulting.jpg') ; background-attachment: scroll; background-size: cover; background-position: center;" 
       class="text-center text-white py-28"
@@ -17,44 +15,31 @@
   </section>
 </div>
 
-
-
-
-<section class="py-16 bg-gray-50">
-    <div class="container mx-auto md:px-6 lg:px-20">
-      <h2 class="mb-12 text-4xl font-bold text-center uppercase text-primary section_title">
-        Nos Services
-      </h2>
-      <p class="mb-16 text-center text-gray-600">
+ -->
+<section class="py-16 ">
+    <div class="container mx-auto md:px-6">
+      <h2 class="mb-12 text-3xl font-bold text-start text-primary">Nos Services</h2>
+      <!-- <p class="mb-16 text-center text-gray-600">
         Toutes les opérations commerciales, industrielles et financières rattachées directement ou indirectement à notre expertise multisectorielle.
-      </p>
-      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
-        <div 
-          *ngFor="let service of services" 
-          class="p-6 transition shadow-lg rounded-xl hover:shadow-2xl hover:-translate-y-2"
-        >
-          <div class="pb-2 overflow-hidden rounded-xl group">
-            <img loading="lazy" [src]="service.image" alt="" class="transition-transform duration-300 rounded-xl group-hover:scale-105">
+      </p> -->
+      <div class="container flex flex-wrap justify-center gap-8">
+       @for(service of services; track service.id) {
+          <div class="max-w-sm p-6 transition rounded-xl hover:shadow-2xl hover:-translate-y-2">
+              <div class="mb-2 overflow-hidden rounded-xl group">
+                <img loading="lazy" [src]="service.image" alt="" class="transition-transform duration-300 rounded-xl group-hover:scale-105">
+              </div>
+              <div class="flex mb-4">
+                <h3 class="ml-4 text-xl font-bold text-gray-800">{{ service.title }}</h3>
+              </div>
+              <ul class="text-gray-600 space-y-2 min-h-[110px]">
+              @for(item of service.items; track item){<li>- {{ item }}</li>}
+              </ul>
+              <a [routerLink]="['/service',service.id]" class="flex items-center gap-2 p-2 text-primary hover:underline">
+                <span>Voir plus</span>
+                <fa-icon [icon]="faArrowRight"></fa-icon>
+              </a>
           </div>
-          <div class="flex items-center mb-4">
-            <div 
-              class="flex items-center justify-center w-12 h-12 text-white rounded-full shadow-md" 
-              [ngClass]="service.iconClass"
-            >
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" [attr.d]="service.iconPath"></path>
-              </svg>
-            </div>
-            <h3 class="ml-4 text-lg font-semibold text-gray-800">{{ service.title }}</h3>
-          </div>
-          <ul class="text-gray-600 space-y-2 min-h-[110px]">
-            <li *ngFor="let item of service.items">- {{ item }}</li>
-          </ul>
-          <a [routerLink]="['/service',service.id]" class="flex items-center gap-2 p-2 text-white bg-blue-900 hover:underline w-fit">
-            <span>See more</span>
-            <fa-icon [icon]="faArrowRight"></fa-icon>
-          </a>
-        </div>
+       }
       </div>
     </div>
   </section>
