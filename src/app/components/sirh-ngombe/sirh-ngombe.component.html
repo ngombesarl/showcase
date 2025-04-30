@@ -1,0 +1,66 @@
+<div class="flex flex-col items-center justify-center gap-2 py-8 mx-auto md:px-20">
+    <h2 class="text-4xl font-bold text-primary">SIRH NGOMBE</h2>
+    <p class="text-lg text-gray-700">Découvrez notre solution complète</p>
+      
+    <div class="flex flex-col gap-8 p-6 bg-white lg:flex-row">
+        <!-- Left Side -->
+        <div class="flex flex-col space-y-6 lg:w-1/2">
+            <div class="relative z-10 w-full bg-blue-500 rounded-lg shadow-lg">
+                <img src="images/sirh-security.png" alt="Sécurisez vos données" class="object-cover w-full h-auto z-5" />
+                <div class="absolute -left-3 -top-2  z-[-1]  w-[138px] h-[138px] rounded-md bg-primary"></div>
+                <div class="absolute -right-2 -bottom-3 z-[-1]  w-[231px] h-[231px] rounded-md bg-primary"></div>
+                <div class="absolute -left-8 top-1/2 rounded-full  w-[20px] h-[20px] bg-primary"></div>
+            </div>
+            <div class="flex flex-col gap-5 my-4 max-w-[85%]">
+                <p class="font-bold text-gray-800 blok">
+                    Avec le SIRH NGOMBE, bénéficiez d'une solution avancée pour améliorer la gestion et
+                    l'optimisation de vos métiers RH
+                  </p>
+                  <p class="block text-gray-700">
+                   Notre solution est évolutive, disponible et innovante pour
+                    transformer votre organisation RH avec des technologies de dernière génération.
+                  </p>
+            </div>
+        </div>
+      
+        <!-- Right Side -->
+        <div class="grid grid-cols-1 gap-6 lg:w-1/2 sm:grid-cols-1">
+          @for(feature of features; track feature.id) {
+            <div class="flex space-x-4">
+                <img [src]="feature.image" [alt]="feature.alt" class="rounded-md w-[280px] h-[200px]" />
+               <div class="flex flex-col">
+                    <h3 class="font-bold uppercase text-sky-600">{{feature.title}}</h3>
+                    <p class="text-sm text-gray-600">
+                    {{feature.description}}
+                    </p>
+               </div>
+            </div>  
+          }
+      
+          <!-- <div class="space-y-2">
+            <img src="images/employment-opportunity.jpg" alt="Employment Opportunity" class="w-12 h-12" />
+            <h3 class="font-bold text-sky-600">EMPLOYMENT OPPORTUNITY</h3>
+            <p class="text-sm text-gray-600">
+              Trouvez et affectez des profils RH adaptés grâce à notre algorithme d’opportunités RH.
+            </p>
+          </div>
+      
+          <div class="space-y-2">
+            <img src="images/integration.jpg" alt="Integration" class="w-12 h-12" />
+            <h3 class="font-bold text-sky-600">INTÉGRATION</h3>
+            <p class="text-sm text-gray-600">
+              Optimisez l’intégration de vos collaborateurs grâce à des processus fluides et efficaces.
+            </p>
+          </div>
+      
+          <div class="space-y-2">
+            <img src="images/cv-marker.jpg" alt="CV Marker" class="w-12 h-12" />
+            <h3 class="font-bold text-sky-600">CV MARKER</h3>
+            <p class="text-sm text-gray-600">
+              Créez et personnalisez votre CV rapidement grâce à notre outil en ligne simple et rapide.
+            </p>
+          </div> -->
+        </div>
+      </div>
+      
+</div>

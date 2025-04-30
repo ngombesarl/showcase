@@ -1,0 +1,33 @@
+<div class="flex flex-col items-center justify-center py-10 md:px-20">
+    <h2 class="text-2xl font-bold uppercase text-sky-600">Autres fonctionnalités</h2>
+    <div class="flex flex-col items-center justify-center w-full gap-8 p-6 bg-white lg:flex-row">
+    <!-- Left Side -->
+    <div class="space-y-4 lg:w-1/2">
+      <div class="relative z-10 w-full shadow-lg rounded-xl">
+        <img src="images/smiling-woman-with-afro-posing-pink-sweater.jpg" alt="Autres fonctionnalités" class="object-cover w-full h-auto z-5 rounded-xl" />
+        <div class="absolute -left-4 -top-6 z-[-1] rounded-full  w-[80px] h-[80px] bg-primary"></div>
+        <div class="absolute -left-10 z-[-1] -bottom-10 rounded-full  w-[180px] h-[180px] bg-primary"></div>
+
+      </div>
+    </div>
+  
+    <!-- Right Side -->
+    <div class="space-y-6 lg:w-1/2">
+      <ul class="space-y-4 text-sm text-gray-700">
+        @for(feature of features; track feature.id) {
+            <li class="flex items-center gap-3">
+                <span class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-lg">
+                  <img [src]="feature.img" [alt]="feature.alt" class="w-6 h-auto" />
+                </span>
+                <span class="font-bold">{{feature.title}}</span>
+            </li>
+        }
+      </ul>
+    </div>
+  </div>
+
+  <button class="px-6 py-2 text-white rounded-full shadow-md bg-sky-500 hover:bg-sky-600">
+    Accéder au service
+  </button>
+  
+</div>

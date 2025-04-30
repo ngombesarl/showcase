@@ -10,6 +10,9 @@ import { PartnersComponent } from "../partners/partners.component";
 import { DigitalPaymentSolutionComponent } from "../digital-payment-solution/digital-payment-solution.component";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { faBars, faCalendar, faMailBulk } from "@fortawesome/free-solid-svg-icons";
+import { ProcessIngineeringComponent } from "../process-ingineering/process-ingineering.component";
+import { SirhNgombeComponent } from "../sirh-ngombe/sirh-ngombe.component";
+import { FeaturesComponent } from "../features/features.component";
 
 @Component({
   selector: 'app-landing',
@@ -22,7 +25,10 @@ import { faBars, faCalendar, faMailBulk } from "@fortawesome/free-solid-svg-icon
     HeroComponent,
     PartnersComponent,
     DigitalPaymentSolutionComponent,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ProcessIngineeringComponent,
+    SirhNgombeComponent,
+    FeaturesComponent
 ],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss'

@@ -19,13 +19,19 @@ module.exports = {
       },
       dropShadow: {
         'header': '0 4px 4px hsla(0, 0%, 0%, 0.25)',
+        'icons': '0 15px 44px hsla(232, 37%, 8%, 0.12)',
         // You can add or override other drop shadows here if needed
+      },
+      boxShadow: {
+        'boxes': '0 10px 60px hsla(0, 0%, 0%, 0.25)',
       },
       colors: {
         primary: '#00b2fa',
         chartColor: '#05bdfa',
         initial: '#00AEEF', 
-        secondary: '#f5f5f5'
+        secondary: '#f5f5f5',
+        terciary: 'hsla(240, 11%, 46%, 1)',
+        blueish: 'hsla(238, 45%, 34%, 1)'
       }
     },
   },
