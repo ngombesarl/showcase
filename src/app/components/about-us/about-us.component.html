@@ -1,0 +1,129 @@
+<div class="flex flex-col w-full">
+    <h2 class="mb-12 text-3xl font-bold text-primary">A propos de nous</h2>
+    <div class="flex flex-col items-center gap-10 p-6 bg-white lg:flex-row">
+        <!-- Left Side -->
+        <div class="relative lg:w-1/2">
+          <img src="images/portrait-jeune-femme-souriante-aide-tablette-numerique-devant-immeuble-bureaux.png" alt="À propos" class="w-full max-w-md rounded-xl" />
+          <!-- Optional: Floating icons -->
+          <!-- <img src="assets/icons/floating-1.png" alt="" class="absolute w-6 h-6 top-5 left-10 animate-bounce" />
+          <img src="assets/icons/floating-2.png" alt="" class="absolute w-6 h-6 bottom-10 right-12 animate-pulse" /> -->
+          <!-- Add more icons and animations as needed -->
+        </div>
+      
+        <!-- Right Side -->
+        <div class="space-y-4 text-gray-700 lg:w-1/2">      
+          <h3 class="text-lg font-bold text-gray-900">Qui sommes nous?</h3>
+      
+          <p>
+            Fondée avec l'objectif de fournir des solutions fiables et évolutives, Ngombe Soft est une entreprise
+            spécialisée dans l'ingénierie des processus métiers. Nous aidons les entreprises à cartographier, piloter et
+            optimiser leurs processus afin de gagner en efficacité et en compétitivité.
+          </p>
+      
+          <p>
+            Avec une expertise multisectorielle couvrant l'industrie alimentaire, la métallurgie, les télécommunications et
+            d'autres secteurs, nous sommes déterminés à accompagner nos clients dans leur transformation digitale et leur
+            quête d'excellence opérationnelle.
+          </p>
+      
+          <!-- Mission / Vision / Valeurs -->
+          <div class="space-y-4">
+           @for(item of aboutUs;track item.id) {
+            <div class="flex items-start gap-5 px-2 py-4 border-b-2 shadow-md border-spacing-12 border-b-gray-500">
+                <span class="text-lg font-bold text-primary">{{item.id}}</span>
+                <div>
+                  <p class="font-semibold text-gray-800">{{item.label}}</p>
+                  <p class="mt-3 text-sm">
+                    {{item.description}}
+                  </p>
+                </div>
+              </div>
+           }
+      
+            <!-- <div class="flex items-start gap-5">
+              <span class="text-lg font-bold text-primary">02</span>
+              <div>
+                <p class="font-semibold text-gray-800">Notre vision</p>
+                <p class="mt-3 text-sm">
+                  Devenir le leader en ingénierie des processus métiers au service de la performance organisationnelle.
+                </p>
+              </div>
+            </div> -->
+<!--       
+            <div class="flex items-start gap-5">
+              <span class="text-lg font-bold text-primary">03</span>
+              <div>
+                <p class="font-semibold text-gray-800">Nos valeurs</p>
+                <p class="mt-3 text-sm">
+                  Passion de la performance et engagement à proposer des solutions innovantes et responsables.
+                </p>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      
+</div>
+
+<div class="flex gap-1 text-white bg-blue-500">
+    <div class="relative z-10 w-1/2 h-full bg-red-500">
+        <div class="absolute inset-0 flex flex-col items-start justify-center w-full h-full px-8 bg-gradient-to-br from-black/70 via-black/50 to-black/80 z-5">
+            <h2 class="mb-4 text-4xl font-bold text-primary">Contactez-nous</h2>
+            <p class="flex flex-col mb-2 text-white">                
+             <span class="text-2xl font-semibold"> NGOMBE SARL</span>
+              <span class="indent-2">Nous et le plus grand nombre</span>
+            </p>
+            <div>
+              <p class="mb-2">
+                <fa-icon class="mr-2 text-primary" [icon]="faLocation"></fa-icon>
+                PET Tours Jumelles, face boulangerie sacker, Douala, Cameroun
+              </p>
+              <p class="mb-2">
+                <fa-icon class="mr-2 text-primary" [icon]="faEmail"></fa-icon> 
+                contact: callcenter&#64;ngombe.org
+              </p>
+              <p class="mb-2">
+                <fa-icon class="mr-2 text-primary" [icon]="faPhone"></fa-icon> 
+                (+237) 662 781 910
+              </p>
+              <p class="mb-2">
+                <fa-icon class="mr-2 text-primary" [icon]="faGlobe"></fa-icon> 
+                www.ngombe.org
+              </p>
+            </div>
+        </div>
+        <img 
+            src="images/person-office-work-day.jpg" 
+            alt="Contact Person" 
+            class="static inset-0 z-[-2] object-cover"
+        >
+        <!-- <div class="w-full h-full absolute inset-0 z-[-1] bg-gradient-to-br from-black/70 via-black/40 to-transparent"></div> -->
+    </div>
+    <div class="w-1/2 px-10 bg-red-500">
+      <h2 class="mb-4 text-4xl font-bold">Envoyez-nous un message</h2>
+      <p class="mb-4">Nous sommes là pour répondre à toutes vos questions et vous accompagner. N'hésitez pas à nous contacter !</p>
+      <form (ngSubmit)="onSubmit()" class="space-y-4">
+        <div>
+          <label for="name" class="block text-sm font-medium">Nom complet</label>
+          <input type="text" id="name" name="name" [(ngModel)]="formData.name" required class="w-full p-2 mt-1 text-gray-800 bg-white rounded-md">
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium">Adresse e-mail</label>
+          <input type="email" id="email" name="email" [(ngModel)]="formData.email" required class="w-full p-2 mt-1 text-gray-800 bg-white rounded-md">
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium">Description</label>
+          <textarea id="message" name="message" rows="4" [(ngModel)]="formData.message" required class="w-full p-2 mt-1 text-gray-800 bg-white rounded-md"></textarea>
+        </div>
+        <div>
+          <button type="submit" class="px-4 py-2 text-blue-500 bg-white rounded-md hover:bg-blue-100">ENVOYER</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <div class="w-full min-h-[400px] flex bg-red-500 mt-10">
+        <div class="w-1/2 h-full bg-yellow-300"></div>
+        <div class="w-1/2 h-full bg-purple-300"></div>
+  </div>

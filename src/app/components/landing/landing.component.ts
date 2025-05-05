@@ -13,6 +13,7 @@ import { faBars, faCalendar, faMailBulk } from "@fortawesome/free-solid-svg-icon
 import { ProcessIngineeringComponent } from "../process-ingineering/process-ingineering.component";
 import { SirhNgombeComponent } from "../sirh-ngombe/sirh-ngombe.component";
 import { FeaturesComponent } from "../features/features.component";
+import { AboutUsComponent } from "../about-us/about-us.component";
 
 @Component({
   selector: 'app-landing',
@@ -28,7 +29,8 @@ import { FeaturesComponent } from "../features/features.component";
     FontAwesomeModule,
     ProcessIngineeringComponent,
     SirhNgombeComponent,
-    FeaturesComponent
+    FeaturesComponent,
+    AboutUsComponent
 ],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss'
