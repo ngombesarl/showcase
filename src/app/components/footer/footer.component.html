@@ -1,0 +1,60 @@
+<footer class="flex flex-col items-center justify-center py-8 text-white bg-primary md:py-16">
+    <div class="mb-4">
+      <div class="flex justify-center">
+        <div class="flex items-center justify-center w-12 h-12 text-xl font-bold bg-white rounded-full text-primary">
+            <img src="logos/ngombe.jpg" alt="Ngombe SARL" class="h-12 mx-auto mb-4">
+        </div>
+      </div>
+      <p class="mt-2 text-sm text-center md:text-base">Nous et le plus grand nombre</p>
+    </div>
+
+    <h2 class="mb-4 text-xl font-semibold text-center md:text-2xl">
+      Abonnez-vous pour recevoir notre newsletter
+    </h2>
+
+    <div class="flex flex-col gap-2 md:flex-row md:gap-4">
+      <input
+        type="email"
+        id="email"
+        name="email"
+        [(ngModel)]="email"
+        placeholder="Entrer votre email"
+        class="w-full px-6 py-2 text-white bg-transparent border border-white rounded-full placeholder:text-white md:w-auto"
+      />
+      <button
+        (click)="subscribe()"
+        class="px-6 py-2 font-medium text-white bg-blue-900 rounded-full focus:outline-none hover:bg-blue-950"
+      >
+        S'abonner
+      </button>
+    </div>
+
+    <div class="mt-16 text-xs text-center md:text-sm">
+      <a href="#" class="mr-2 hover:underline">Carrières</a>
+      <span class="mx-1">|</span>
+      <a href="#" class="mr-2 hover:underline">politique de confidentialité</a>
+      <span class="mx-1">|</span>
+      <a href="#" class="hover:underline">Conditions générales</a>
+      <p class="mt-2">© 2024 Ngombe SARL. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+<!-- 
+  <footer class="py-12 text-white bg-primary ">
+    <div class="container mx-auto text-center">
+      <img src="logos/ngombe.jpg" alt="Ngombe SARL" class="h-10 mx-auto mb-4">
+      <div>
+        <p>NGOMBE SARL</p>
+        <p>Nous et le plus grand nombre</p>
+        <p>Abonnez-vous pour recevoir notre newsletter</p>
+      </div>
+      <div>
+        <form action="">
+          <div class="flex flex-col items-center justify-center w-full md:flex-row">
+            <input type="text" name="email" class="rounded-full">
+          </div>
+        </form>
+      </div>
+      <p>&copy; 2024 Ngombe SARL. Tous droits réservés.</p>
+    </div>
+  </footer> -->

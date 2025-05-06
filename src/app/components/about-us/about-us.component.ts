@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // Import FormsModule
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { faMapMarkerAlt, faEnvelope, faPhone, faBuilding, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { ContactComponent } from "../contact/contact.component";
 
 
 @Component({
   selector: 'app-about-us',
   standalone: true,
-  imports: [FormsModule,FontAwesomeModule],
+  imports: [FormsModule, FontAwesomeModule, ContactComponent],
   templateUrl: './about-us.component.html',
   styleUrl: './about-us.component.scss'
 })

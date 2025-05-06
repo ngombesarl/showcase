@@ -1,8 +1,8 @@
-<header class="sticky top-0 z-50 bg-white drop-shadow-header">
-    <div class="container items-center justify-between hidden p-4 mx-auto desktop-menu md:flex">
+<header class="top-0 z-50 bg-white md:drop-shadow-md">
+    <div class="container items-center justify-between hidden p-4 mx-auto bg-red-500 desktop-menu md:flex">
       <a href="/" class="flex items-center">
         <img src="logos/ngombe.jpg" alt="Ngombe SARL" class="h-12 mr-4">
-        <h1 class="text-3xl font-bold">Ngombe SARL</h1>
+        <!-- <h1 class="text-3xl font-bold">Ngombe SARL</h1> -->
       </a>
       <nav class="space-x-6">
         @for(link of links; track $index) {
@@ -10,13 +10,12 @@
         }
       </nav>
     </div>
-
-    <div class="fixed left-0 z-50 flex items-center justify-between w-full px-8 top-4 md:hidden">
-      <!-- <div class="w-[70px] h-[70px] rounded-full"> -->
+<!-- 
+    <div class="fixed left-0 z-50 flex items-center justify-between w-full px-8 shadow-lg top-4 md:hidden">
       <a href="/" class="w-[70px] h-[70px]">
         <img src="logos/ngombe.jpg" alt="logo ngombe" [ngClass]="{'hidden' : isOpen}" class="object-cover w-full h-full rounded-full">
       </a>
-      <div class="bg-white rounded-full">
+      <div class="bg-white">
         <button 
         (click)="toggleSidebar()"
         class="bg-black hamburger menu-btn-side" 
@@ -27,7 +26,7 @@
         <span class="hamburger-bottom"></span>
       </button>
       </div>
-    </div>
+    </div> -->
 
     <sidebar 
       class="capitalize z-40 mobile-menu fixed right-0 top-0 flex flex-col items-center pt-8 h-screen w-[90vw] sm:w-[70vw] bg-blue-500/50 backdrop-blur-md transition-transform duration-1000" 

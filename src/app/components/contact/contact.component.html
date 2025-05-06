@@ -1,170 +1,73 @@
-<section id="about-us" class="py-20 bg-gray-50">
-    <div class="container px-6 mx-auto lg:px-20">
-      <!-- Section Header -->
-      <div class="mb-12 text-center">
-        <h2 class="text-4xl font-bold uppercase text-primary section_title">À propos de nous</h2>
-        <p class="mt-4 text-gray-600">Découvrez notre mission, notre vision et les valeurs qui guident chacune de nos actions.</p>
-      </div>
-  
-      <!-- About Us Content -->
-      <div class="grid items-center grid-cols-1 gap-16 md:grid-cols-2">
-        <!-- Left Column: Image -->
-        <div class="overflow-hidden rounded-lg">
-          <img src="/images/hero-5.jpg" alt="Notre équipe" class="object-cover w-full h-full transition-transform duration-300 hover:scale-105">
+<section>
+  <div id="contact" class="flex text-white bg-primary">
+    <div class="relative z-10 w-1/2 h-full">
+        <div class="absolute inset-0 flex flex-col items-start justify-center w-full h-full px-8 bg-gradient-to-br from-black/70 via-black/50 to-black/80 z-5">
+            <h2 class="mb-4 text-4xl font-bold text-primary">Contactez-nous</h2>
+            <p class="flex flex-col mb-2 text-white">                
+             <span class="text-2xl font-semibold"> NGOMBE SARL</span>
+              <span class="indent-2">Nous et le plus grand nombre</span>
+            </p>
+            <div>
+              <p class="mb-2">
+                <fa-icon class="mr-2 text-primary" [icon]="faLocation"></fa-icon>
+                PET Tours Jumelles, face boulangerie sacker, Douala, Cameroun
+              </p>
+              <p class="mb-2">
+                <fa-icon class="mr-2 text-primary" [icon]="faEmail"></fa-icon> 
+                contact: callcenter&#64;ngombe.org
+              </p>
+              <p class="mb-2">
+                <fa-icon class="mr-2 text-primary" [icon]="faPhone"></fa-icon> 
+                (+237) 662 781 910
+              </p>
+              <p class="mb-2">
+                <fa-icon class="mr-2 text-primary" [icon]="faGlobe"></fa-icon> 
+                www.ngombe.org
+              </p>
+            </div>
         </div>
-  
-        <!-- Right Column: Text -->
+        <img 
+            src="images/person-office-work-day.jpg" 
+            alt="Contact Person" 
+            class="static inset-0 z-[-2]"
+        >
+    </div>
+    <div class="w-1/2 h-full p-10">
+      <h2 class="mb-4 text-2xl font-bold">Envoyez-nous un message</h2>
+      <p class="mb-4">Nous sommes là pour répondre à toutes vos questions et vous accompagner. N'hésitez pas à nous contacter !</p>
+      <form (ngSubmit)="onSubmit()">
         <div>
-          <h3 class="mb-4 text-3xl font-semibold text-primary">Qui sommes-nous ?</h3>
-          <p class="mb-6 leading-relaxed text-gray-700">
-            Fondée avec l’objectif de fournir des solutions fiables et évolutives, <strong>Ngombe Sarl</strong> est une entreprise spécialisée dans l’ingénierie des processus métiers. 
-            Nous aidons les entreprises à cartographier, piloter et optimiser leurs processus afin de gagner en efficacité et en compétitivité.
-          </p>
-          <p class="leading-relaxed text-gray-700">
-            Avec une expertise multisectorielle couvrant l’industrie alimentaire, la métallurgie, les télécommunications et bien d’autres secteurs, nous sommes déterminés à accompagner nos clients dans leur transformation digitale et leur quête d’excellence opérationnelle.
-          </p>
+          <!-- <label for="name" class="block text-sm font-medium">Nom complet</label> -->
+          <input type="text" placeholder="Entrez votre nom"  id="name" name="name" [(ngModel)]="formData.name" required class="w-full p-2 pl-4 mt-2 text-sm text-white bg-transparent border-2 border-white placeholder:text-white">
         </div>
-      </div>
-  
-      <!-- Mission, Vision & Values -->
-      <div class="mt-20">
-        <div class="grid grid-cols-1 gap-12 lg:grid-cols-3">
-          <!-- Mission -->
-          <div class="p-6 transition-shadow duration-300 bg-white rounded-lg shadow-lg hover:shadow-xl">
-            <div class="flex items-center mb-4">
-              <div class="flex items-center justify-center w-12 h-12 text-white rounded-full bg-primary">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1 4v-4h1m-2-4h.01M12 8c1.104 0 2-.896 2-2s-.896-2-2-2-2 .896-2 2 .896 2 2 2zm0 6v6m-6 0h12"></path>
-                </svg>
-              </div>
-              <h4 class="ml-4 text-xl font-semibold text-primary">Notre Mission</h4>
-            </div>
-            <p class="text-gray-600">
-              Offrir des solutions innovantes et adaptées pour optimiser les processus métiers de nos clients et les aider à atteindre leurs objectifs stratégiques.
-            </p>
-          </div>
-  
-          <!-- Vision -->
-          <div class="p-6 transition-shadow duration-300 bg-white rounded-lg shadow-lg hover:shadow-xl">
-            <div class="flex items-center mb-4">
-              <div class="flex items-center justify-center w-12 h-12 text-white rounded-full bg-primary">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
-                </svg>
-              </div>
-              <h4 class="ml-4 text-xl font-semibold text-primary">Notre Vision</h4>
-            </div>
-            <p class="text-gray-600">
-              Devenir le partenaire de référence en ingénierie des processus métiers, reconnu pour notre expertise et notre engagement envers la qualité.
-            </p>
-          </div>
-  
-          <!-- Values -->
-          <div class="p-6 transition-shadow duration-300 bg-white rounded-lg shadow-lg hover:shadow-xl">
-            <div class="flex items-center mb-4">
-              <div class="flex items-center justify-center w-12 h-12 text-white rounded-full bg-primary">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m0 0a9.985 9.985 0 01-8.958 5.998c-5.523 0-10-4.477-10-10S5.477 2 11 2s10 4.477 10 10c0 2.2-.71 4.254-1.918 5.998z"></path>
-                </svg>
-              </div>
-              <h4 class="ml-4 text-xl font-semibold text-primary">Nos Valeurs</h4>
-            </div>
-            <ul class="pl-6 space-y-2 text-gray-600 list-disc">
-              <li>Excellence opérationnelle</li>
-              <li>Innovation continue</li>
-              <li>Intégrité et transparence</li>
-              <li>Engagement envers nos clients</li>
-            </ul>
-          </div>
+        <div>
+          <!-- <label for="email" class="block text-sm font-medium">Adresse e-mail</label> -->
+          <input type="email" placeholder="Entrez votre Email"  id="email" name="email" [(ngModel)]="formData.email" required class="w-full p-2 pl-4 mt-2 text-sm text-white bg-transparent border-2 border-white placeholder:text-white">
         </div>
-      </div>
+        <div>
+          <!-- <label for="message" class="block text-sm font-medium">Description</label> -->
+          <textarea id="message"  placeholder="Entrez votre message" name="message" rows="4" [(ngModel)]="formData.message" required class="w-full p-2 pl-4 mt-2 text-sm text-white bg-transparent border-2 border-white placeholder:text-white"></textarea>
+        </div>
+        <div>
+          <button type="submit" class="flex items-center justify-center w-full py-2 font-bold text-blue-500 bg-white rounded-2xl hover:bg-blue-100">ENVOYER</button>
+        </div>
+      </form>
     </div>
-  </section>
-  
+  </div>
 
-<section id="contact" class="py-16 bg-gray-200">
-    <div class="container mx-auto md:px-6 lg:px-20">
-        <h2 class="mb-10 text-4xl font-extrabold text-center uppercase text-primary section_title">Contactez-Nous</h2>
-        <p class="mb-16 text-center text-gray-600">
-            Nous sommes là pour répondre à toutes vos questions et vous accompagner. N'hésitez pas à nous contacter !
-        </p>
-    <!-- Contact Section -->
-        <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
-    <!-- Contact Information -->
-            <div class="p-8 shadow-lg bg-white/70 backdrop-blur-md rounded-xl h-fit w-fit">
-                <h3 class="mb-6 text-xl font-semibold text-gray-800">Informations de contact</h3>
-                <div class="space-y-4">
-                    <div>
-                        <h1 class="flex flex-wrap items-end justify-start text-3xl md:flex-nowrap">
-                            <fa-icon [icon]="faBuilding" class="text-primary text-7xl"></fa-icon>
-                            Ngombe Sarl
-                        </h1>
-                        <p class="text-lg italic font-semibold tracking-wide text-gray-700">Nous et le plus grand nombre</p>                 
-                    </div>
-                    <div class="flex flex-wrap items-center justify-start md:flex-nowrap ">
-                        <p class="flex items-center justify-center w-10 h-10 text-white bg-blue-500 rounded-full shadow-md">
-                            <fa-icon [icon]="faLocation"></fa-icon>
-                        </p>
-                        <p class="ml-4 text-gray-700">PK10, Tours Jumelles, face boulangerie saker, Douala, Cameroun</p>
-                    </div>
-                    <div class="flex flex-wrap items-center md:flex-nowrap ">
-                        <p class="flex items-center justify-center w-10 h-10 text-white bg-green-500 rounded-full shadow-md">
-                            <fa-icon [icon]="faEmail"></fa-icon> 
-                        </p>
-                        <p class="ml-4 text-gray-700">contact:  callcenter&#64;ngombe.org</p>
-                    </div>
-                    <div class="flex flex-wrap items-center md:flex-nowrap ">
-                        <p class="flex items-center justify-center w-10 h-10 text-white bg-red-500 rounded-full shadow-md">
-                            <fa-icon [icon]="faPhone"></fa-icon> 
-                        </p>
-                        <p class="ml-4 text-gray-700">(+237) 652 751 999</p>
-                    </div>
 
-                    <a href="https://www.ngombe.org" class="flex flex-wrap items-center md:flex-nowrap ">
-                        <p class="flex items-center justify-center w-10 h-10 text-white bg-blue-400 rounded-full shadow-md">
-                            <fa-icon [icon]="faGlobe"></fa-icon> 
-                        </p>
-                        <p class="ml-4 text-gray-700">www.ngombe.org</p>
-                    </a>
-                </div>
-            </div>
-    <!-- Contact Form -->
-            <div class="p-8 shadow-lg bg-white/70 backdrop-blur-md rounded-xl">
-            <h3 class="mb-6 text-xl font-semibold text-gray-800">Envoyez-nous un message</h3>
-            <form action="#" method="POST" class="space-y-6">
-                <div>
-                    <label for="name" class="block text-sm font-medium text-gray-600">Nom complet</label>
-                    <input type="text" id="name" name="name" required
-                    class="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
-                </div>
-                <div>
-                    <label for="email" class="block text-sm font-medium text-gray-600">Email</label>
-                    <input type="email" id="email" name="email" required
-                    class="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
-                </div>
-                <div>
-                    <label for="message" class="block text-sm font-medium text-gray-600">Message</label>
-                    <textarea id="message" name="message" rows="5" required
-                    class="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"></textarea>
-                </div>
-                <button type="submit"
-                    class="w-full py-3 text-white transition bg-blue-500 rounded-lg shadow-md hover:bg-blue-600">Envoyer</button>
-            </form>
-            </div>
-        </div>
-    </div>
-    <!-- Map Section -->
-    <div class="flex flex-col items-center w-full gap-4 mt-16 font-semibold">
-        <p class="text-3xl text-center text-gray-800 capitalize section_title">
-          Comment nous trouver ?
-        </p>
-        <iframe 
-          class="w-full shadow-lg h-96 rounded-xl" 
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10000!2d9.771888468433405!3d4.049431448974978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sfr!4v1633340325677" 
-          style="border:0;" 
-          allowfullscreen="" 
-          loading="lazy">
-        </iframe>
-      </div>
-      
+   <!-- Map Section -->
+   <div class="flex flex-col items-center w-full gap-4 mt-16 font-semibold">
+    <p class="text-3xl text-center text-gray-800 capitalize section_title">
+      Comment nous trouver ?
+    </p>
+    <iframe 
+      class="w-full shadow-lg h-96 rounded-xl" 
+      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10000!2d9.771888468433405!3d4.049431448974978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sfr!4v1633340325677" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
+  </div>
+
 </section>

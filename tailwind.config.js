@@ -24,6 +24,7 @@ module.exports = {
       },
       boxShadow: {
         'boxes': '0 10px 60px hsla(0, 0%, 0%, 0.25)',
+        'header': '0 4px 4px hsla(0, 0%, 0%, 0.25)',
       },
       colors: {
         primary: '#00b2fa',
