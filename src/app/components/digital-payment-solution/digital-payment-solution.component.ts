@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faChartLine, faChartPie, faCoins, faGraduationCap, faHandHoldingUsd, faHandshake, faPalette, faPallet, faPiggyBank, faShoppingCart, faStore, faUsers, faWallet } from '@fortawesome/free-solid-svg-icons';
+import { AnimateOnScrollDirective } from "../../directives/animate-on-scroll.directive";
 
 @Component({
   selector: 'app-digital-payment-solution',
   standalone: true,
-  imports: [FontAwesomeModule],
+  imports: [FontAwesomeModule,AnimateOnScrollDirective],
   templateUrl: './digital-payment-solution.component.html',
   styleUrl: './digital-payment-solution.component.scss'
 })

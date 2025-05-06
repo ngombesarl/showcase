@@ -4,11 +4,12 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AnimateOnScrollDirective } from "../../directives/animate-on-scroll.directive";
 
 @Component({
   selector: 'app-our-services',
   standalone: true,
-  imports: [RouterModule,FontAwesomeModule],
+  imports: [RouterModule,FontAwesomeModule,AnimateOnScrollDirective],
   templateUrl: './our-services.component.html',
   styles: ``
 })

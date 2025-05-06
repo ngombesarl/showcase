@@ -1,5 +1,5 @@
-<header class="top-0 z-50 bg-white md:drop-shadow-md">
-    <div class="container items-center justify-between hidden p-4 mx-auto bg-red-500 desktop-menu md:flex">
+<header class="sticky top-0 z-50 bg-white shadow-lg">
+    <div class="container items-center justify-between hidden p-4 mx-auto desktop-menu md:flex">
       <a href="/" class="flex items-center">
         <img src="logos/ngombe.jpg" alt="Ngombe SARL" class="h-12 mr-4">
         <!-- <h1 class="text-3xl font-bold">Ngombe SARL</h1> -->
@@ -10,10 +10,10 @@
         }
       </nav>
     </div>
-<!-- 
-    <div class="fixed left-0 z-50 flex items-center justify-between w-full px-8 shadow-lg top-4 md:hidden">
+
+    <div class="fixed left-0 z-50 flex items-center justify-between w-full shadow-lg px-14 top-4 md:hidden">
       <a href="/" class="w-[70px] h-[70px]">
-        <img src="logos/ngombe.jpg" alt="logo ngombe" [ngClass]="{'hidden' : isOpen}" class="object-cover w-full h-full rounded-full">
+        <img src="logos/ngombe.jpg" alt="logo ngombe" [ngClass]="{'hidden' : isOpen}" class="object-cover w-full h-full">
       </a>
       <div class="bg-white">
         <button 
@@ -26,19 +26,21 @@
         <span class="hamburger-bottom"></span>
       </button>
       </div>
-    </div> -->
+    </div>
 
-    <sidebar 
-      class="capitalize z-40 mobile-menu fixed right-0 top-0 flex flex-col items-center pt-8 h-screen w-[90vw] sm:w-[70vw] bg-blue-500/50 backdrop-blur-md transition-transform duration-1000" 
-      [ngClass]="{'translate-x-0': isOpen, 'translate-x-full': !isOpen}"
-    > 
-      <div class="w-[70px] h-[70px]">
-        <img src="logos/ngombe.jpg" alt="logo ngombe" [ngClass]="{'hidden' : !isOpen}" class="object-cover w-full h-full rounded-full">
+    <div
+      class="fixed top-0 right-0 z-40 w-full h-full overflow-hidden transition duration-700 origin-top-right bg-white shadow-lg rounded-bl-md"
+      [ngClass]="{'scale-100 translate-x-0 translate-y-0 opacity-100 rounded-full': isOpen, 'scale-0 translate-x-full -translate-y-full opacity-0 ': !isOpen}"
+    >
+      <div class="flex flex-col items-center justify-center gap-4 py-8">
+        <div class="w-[70px] h-[70px]">
+          <img src="logos/ngombe.jpg" alt="logo ngombe" class="object-cover w-full h-full rounded-full">
+        </div>
+        <nav class="flex flex-col items-center justify-center w-full gap-4 mt-4">
+          @for(link of links; track $index) {
+            <a (click)="toggleSidebar()" [href]="'#'+link.anchor" class="text-2xl hover:text-blue-600">{{link.name}}</a>
+          }
+        </nav>
       </div>
-      <nav class="flex flex-col items-center justify-center w-full gap-4 mt-8">
-        @for(link of links; track $index) {
-          <a (click)="toggleSidebar()" [href]="'#'+link.anchor" class="text-4xl hover:text-blue-300">{{link.name}}</a>
-        }
-      </nav>
-  </sidebar>
+    </div>
   </header>

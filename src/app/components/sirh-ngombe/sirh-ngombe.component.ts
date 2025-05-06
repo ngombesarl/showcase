@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { AnimateOnScrollDirective } from "../../directives/animate-on-scroll.directive";
 
 @Component({
   selector: 'app-sirh-ngombe',
   standalone: true,
-  imports: [],
+  imports: [AnimateOnScrollDirective],
   templateUrl: './sirh-ngombe.component.html',
   styleUrl: './sirh-ngombe.component.scss'
 })

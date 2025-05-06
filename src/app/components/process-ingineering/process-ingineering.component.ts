@@ -7,7 +7,7 @@ import { interval, Subscription } from "rxjs";
 @Component({
   selector: 'app-process-ingineering',
   standalone: true,
-  imports: [FontAwesomeModule,SlicePipe],
+  imports: [FontAwesomeModule],
   templateUrl: './process-ingineering.component.html',
   styleUrl: './process-ingineering.component.scss'
 })
@@ -109,11 +109,11 @@ export class ProcessIngineeringComponent implements AfterViewInit, OnDestroy {
 
   @ViewChild('scrollableContainer') scrollableContainer!: ElementRef;
   private scrollIntervalSubscription!: Subscription;
-  private scrollSpeed = 2; // Adjust the scrolling speed as needed
+  private scrollSpeed = 4; // Adjust the scrolling speed as needed
 
   ngAfterViewInit(): void {
     this.startAutoScroll();
-    console.log('ngAfterViewInit called', this.scrollableContainer);
+    // console.log('ngAfterViewInit called', this.scrollableContainer);
 
   }
 

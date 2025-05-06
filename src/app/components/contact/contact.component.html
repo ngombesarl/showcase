@@ -1,6 +1,6 @@
 <section>
-  <div id="contact" class="flex text-white bg-primary">
-    <div class="relative z-10 w-1/2 h-full">
+  <div id="contact" class="flex flex-col text-white md:flex-row bg-primary">
+    <div class="relative z-10 w-full md:w-1/2 md:h-full">
         <div class="absolute inset-0 flex flex-col items-start justify-center w-full h-full px-8 bg-gradient-to-br from-black/70 via-black/50 to-black/80 z-5">
             <h2 class="mb-4 text-4xl font-bold text-primary">Contactez-nous</h2>
             <p class="flex flex-col mb-2 text-white">                
@@ -32,10 +32,10 @@
             class="static inset-0 z-[-2]"
         >
     </div>
-    <div class="w-1/2 h-full p-10">
+    <div class="w-full p-2 md:p-10 md:w-1/2 md:h-full">
       <h2 class="mb-4 text-2xl font-bold">Envoyez-nous un message</h2>
       <p class="mb-4">Nous sommes là pour répondre à toutes vos questions et vous accompagner. N'hésitez pas à nous contacter !</p>
-      <form (ngSubmit)="onSubmit()">
+      <form (ngSubmit)="onSubmit()" class="gap-4 px-4 md:px-8">
         <div>
           <!-- <label for="name" class="block text-sm font-medium">Nom complet</label> -->
           <input type="text" placeholder="Entrez votre nom"  id="name" name="name" [(ngModel)]="formData.name" required class="w-full p-2 pl-4 mt-2 text-sm text-white bg-transparent border-2 border-white placeholder:text-white">
@@ -49,16 +49,17 @@
           <textarea id="message"  placeholder="Entrez votre message" name="message" rows="4" [(ngModel)]="formData.message" required class="w-full p-2 pl-4 mt-2 text-sm text-white bg-transparent border-2 border-white placeholder:text-white"></textarea>
         </div>
         <div>
-          <button type="submit" class="flex items-center justify-center w-full py-2 font-bold text-blue-500 bg-white rounded-2xl hover:bg-blue-100">ENVOYER</button>
+          <button type="submit" class="flex items-center justify-center w-full py-2 mt-2 font-bold text-blue-500 bg-white rounded-2xl hover:bg-blue-100">ENVOYER</button>
         </div>
       </form>
     </div>
   </div>
 
 
+
    <!-- Map Section -->
    <div class="flex flex-col items-center w-full gap-4 mt-16 font-semibold">
-    <p class="text-3xl text-center text-gray-800 capitalize section_title">
+    <p class="mb-12 text-4xl font-bold text-center uppercase text-primary">
       Comment nous trouver ?
     </p>
     <iframe 
@@ -71,3 +72,104 @@
   </div>
 
 </section>
+
+<!-- 
+<section class="fade-in"
+         appAnimateOnScroll animationClass="fade-in">
+  <div id="contact" class="flex flex-col text-white md:flex-row bg-primary">
+    <div class="relative z-10 w-full md:w-1/2 md:h-full slide-left"
+         appAnimateOnScroll animationClass="slide-left"
+         [delay]="200">
+        <div class="absolute inset-0 flex flex-col items-start justify-center w-full h-full px-8 bg-gradient-to-br from-black/70 via-black/50 to-black/80 z-5">
+            <h2 class="mb-4 text-4xl font-bold text-primary slide-down-item"
+                appAnimateOnScroll animationClass="slide-down-item"
+                [delay]="300">Contactez-nous</h2>
+            <p class="flex flex-col mb-2 text-white fade-in-item"
+               appAnimateOnScroll animationClass="fade-in-item"
+               [delay]="400">
+             <span class="text-2xl font-semibold"> NGOMBE SARL</span>
+              <span class="indent-2">Nous et le plus grand nombre</span>
+            </p>
+            <div class="fade-in-item"
+                 appAnimateOnScroll animationClass="fade-in-item"
+                 [delay]="500">
+              <p class="mb-2">
+                <fa-icon class="mr-2 text-primary" [icon]="faLocation"></fa-icon>
+                PET Tours Jumelles, face boulangerie sacker, Douala, Cameroun
+              </p>
+              <p class="mb-2">
+                <fa-icon class="mr-2 text-primary" [icon]="faEmail"></fa-icon>
+                contact: callcenter&#64;ngombe.org
+              </p>
+              <p class="mb-2">
+                <fa-icon class="mr-2 text-primary" [icon]="faPhone"></fa-icon>
+                (+237) 662 781 910
+              </p>
+              <p class="mb-2">
+                <fa-icon class="mr-2 text-primary" [icon]="faGlobe"></fa-icon>
+                www.ngombe.org
+              </p>
+            </div>
+        </div>
+        <img
+            src="images/person-office-work-day.jpg"
+            alt="Contact Person"
+            class="static inset-0 z-[-2] zoom-in"
+            appAnimateOnScroll animationClass="zoom-in"
+            [delay]="600"
+        >
+    </div>
+    <div class="w-full p-2 md:p-10 md:w-1/2 md:h-full slide-right"
+         appAnimateOnScroll animationClass="slide-right"
+         [delay]="700">
+      <h2 class="mb-4 text-2xl font-bold slide-down-item"
+          appAnimateOnScroll animationClass="slide-down-item"
+          [delay]="800">Envoyez-nous un message</h2>
+      <p class="mb-4 fade-in-item"
+         appAnimateOnScroll animationClass="fade-in-item"
+         [delay]="900">Nous sommes là pour répondre à toutes vos questions et vous accompagner. N'hésitez pas à nous contacter !</p>
+      <form (ngSubmit)="onSubmit()" class="gap-4 px-4 md:px-8">
+        <div>
+          <input type="text" placeholder="Entrez votre nom"  id="name" name="name" [(ngModel)]="formData.name" required class="w-full p-2 pl-4 mt-2 text-sm text-white bg-transparent border-2 border-white placeholder:text-white fade-in-item"
+                 appAnimateOnScroll animationClass="fade-in-item"
+                 [delay]="1000">
+        </div>
+        <div>
+          <input type="email" placeholder="Entrez votre Email"  id="email" name="email" [(ngModel)]="formData.email" required class="w-full p-2 pl-4 mt-2 text-sm text-white bg-transparent border-2 border-white placeholder:text-white fade-in-item"
+                 appAnimateOnScroll animationClass="fade-in-item"
+                 [delay]="1100">
+        </div>
+        <div>
+          <textarea id="message"  placeholder="Entrez votre message" name="message" rows="4" [(ngModel)]="formData.message" required class="w-full p-2 pl-4 mt-2 text-sm text-white bg-transparent border-2 border-white placeholder:text-white fade-in-item"
+                    appAnimateOnScroll animationClass="fade-in-item"
+                    [delay]="1200"></textarea>
+        </div>
+        <div>
+          <button type="submit" class="flex items-center justify-center w-full py-2 mt-2 font-bold text-blue-500 bg-white rounded-2xl hover:bg-blue-100 slide-up-item"
+                  appAnimateOnScroll animationClass="slide-up-item"
+                  [delay]="1300">ENVOYER</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+   <div class="flex flex-col items-center w-full gap-4 mt-16 font-semibold fade-in"
+        appAnimateOnScroll animationClass="fade-in"
+        [delay]="1400">
+    <p class="mb-12 text-4xl font-bold text-center uppercase text-primary slide-down-item"
+       appAnimateOnScroll animationClass="slide-down-item"
+       [delay]="1500">
+      Comment nous trouver ?
+    </p>
+    <iframe
+      class="w-full shadow-lg h-96 rounded-xl zoom-in"
+      appAnimateOnScroll animationClass="zoom-in"
+      [delay]="1600"
+      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10000!2d9.771888468433405!3d4.049431448974978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sfr!4v1633340325677"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+  </div>
+
+</section> -->

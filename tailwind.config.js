@@ -9,10 +9,12 @@ module.exports = {
         'xs': '480px',  // Custom screen size
         'sm': '640px',  // Default small screen size
         'md': '768px',  // Default medium screen size
+        'hero': '881px',     // a size made to deal with an absolute issue on the hero section on 768 < size < 881 screens
         'lg': '1024px', // Default large screen size
         'xl': '1280px', // Default extra-large screen size
         '2xl': '1536px', // Default 2x extra-large screen size
         '3xl': '1800px', // Your custom size
+  
       }, 
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'], // 'Poppins' is the font family name you'll use in Tailwind classes
