@@ -9,6 +9,7 @@ body {
   // font-family: 'Poppins', sans-serif;
   // font-family: 'Times New Roman', Times, serif;
   scroll-behavior: smooth;
+  // overflow-x: hidden;
 }
 * {
   scroll-behavior: smooth;
@@ -148,6 +149,17 @@ background: black;
 
   &.active {
     transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.slide-bottom {
+  transform: translateY(50px);
+  opacity: 0;
+  transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+
+  &.active {
+    transform: translateY(0);
     opacity: 1;
   }
 }

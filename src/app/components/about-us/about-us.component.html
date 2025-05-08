@@ -8,10 +8,18 @@
         <div class="relative lg:w-1/2 slide-left"
              appAnimateOnScroll animationClass="slide-left"
              [delay]="300">
-          <img src="images/portrait-jeune-femme-souriante-aide-tablette-numerique-devant-immeuble-bureaux.png" alt="À propos" class="w-full max-w-md rounded-xl zoom-in"
+          <img src="images/portrait-jeune-femme-souriante-aide-tablette-numerique-devant-immeuble-bureaux.png" alt="À propos" class="relative w-full max-w-md z-1 rounded-xl zoom-in"
                appAnimateOnScroll animationClass="zoom-in"
-               [delay]="400"/>
-          </div>
+               [delay]="400"
+          />
+          <img src="images/about-us-motif.png" alt="" class="absolute top-0 right-0 w-full h-auto -z-10" />
+        </div>
+          <!-- <div>
+            <img src="" alt=""> -->
+             <!-- Optional: Floating icons -->
+          <!-- <!-- <img src="assets/icons/floating-1.png" alt="" class="absolute w-6 h-6 top-5 left-10 animate-bounce" /> -->
+          <!-- Add more icons and animations as needed -->
+          <!-- </div> -->
 
         <div class="space-y-4 text-gray-700 lg:w-1/2 slide-right"
              appAnimateOnScroll animationClass="slide-right"

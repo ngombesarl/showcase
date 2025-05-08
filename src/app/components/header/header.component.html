@@ -1,17 +1,24 @@
-<header class="sticky top-0 z-50 bg-white shadow-lg">
-    <div class="container items-center justify-between hidden p-4 mx-auto desktop-menu md:flex">
+<header class="sticky top-0 z-50 bg-white shadow-lg " >
+    <div class="container items-center justify-between hidden p-4 mx-auto desktop-menu md:flex fade-in"
+    appAnimateOnScroll animationClass="fade-in-item"
+    [delay]="600">
       <a href="/" class="flex items-center">
         <img src="logos/ngombe.jpg" alt="Ngombe SARL" class="h-12 mr-4">
         <!-- <h1 class="text-3xl font-bold">Ngombe SARL</h1> -->
       </a>
       <nav class="space-x-6">
         @for(link of links; track $index) {
-          <a [href]="'#'+link.anchor" class="hover:text-blue-600">{{link.name}}</a>
+          <a appAnimateOnScroll animationClass="slide-left" 
+            [href]="'#'+link.anchor" 
+            class="hover:text-blue-600 slide-left"
+            [delay]="700 + (link.id * 100)">
+          <!-- >{{link.name}}</a> -->
+          {{link.name}}</a>
         }
       </nav>
     </div>
 
-    <div class="fixed left-0 z-50 flex items-center justify-between w-full shadow-lg px-14 top-4 md:hidden">
+    <div class="fixed left-0 z-50 flex items-center justify-between w-full px-20 shadow-lg top-4 md:hidden">
       <a href="/" class="w-[70px] h-[70px]">
         <img src="logos/ngombe.jpg" alt="logo ngombe" [ngClass]="{'hidden' : isOpen}" class="object-cover w-full h-full">
       </a>
