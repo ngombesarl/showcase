@@ -25,18 +25,27 @@
             <li class="flex items-center gap-3 fade-in"
                 appAnimateOnScroll animationClass="fade-in"
                 [delay]="600 + (feature.id * 100)">
-                <!-- <span class="flex items-center justify-center w-16 h-16 text-xl bg-white rounded-full shadow-lg zoom-in-item"
+                <span class="flex items-center justify-center w-12 h-12 text-lg bg-white rounded-full shadow-lg zoom-in-item"
                       appAnimateOnScroll animationClass="zoom-in-item"
                       [delay]="700 + (feature.id * 100)">
-                </span> -->
-                <img  appAnimateOnScroll animationClass="zoom-in-item"
+                      <fa-icon
+                        appAnimateOnScroll 
+                        animationClass="zoom-in-item"
+                        [delay]="700 + (feature.id * 100)"
+                        [icon]="feature.icon"
+                        [class]="isEven(feature.id) ? 'text-blue-500' : 'text-orange-500' "
+                    ></fa-icon>                  
+                </span>
+                <span class="font-bold">{{feature.title}}</span>
+
+                <!-- <img  appAnimateOnScroll animationClass="zoom-in-item"
                       [delay]="700 + (feature.id * 100)"
                       [src]="feature.img" 
                       [alt]="feature.alt" 
-                      class="w-16 h-16" 
-                />
-                <span class="font-bold">{{feature.title}}</span>
-            </li>
+                      [ngClass]="{ 'w-16 h-16': ![1, 6].includes(feature.id), 'w-5 h-5': [1, 6].includes(feature.id) }"
+                /> -->
+
+              </li>
         }
       </ul>
     </div>

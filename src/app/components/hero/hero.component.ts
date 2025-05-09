@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
-import { faBars, faCalendar, faMailBulk } from "@fortawesome/free-solid-svg-icons";
+import {faCalendarAlt, faChartBar, faCheck, faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { AnimateOnScrollDirective } from "../../directives/animate-on-scroll.directive";
 
 @Component({
@@ -20,9 +20,9 @@ import { AnimateOnScrollDirective } from "../../directives/animate-on-scroll.dir
 export class HeroComponent {
 
 
-  faProcessus = faBars;
-  faIng = faCalendar;
-  faSirh = faCalendar;
+  faProcessus = faChartBar;
+  faIng = faCheck;
+  faSirh = faCalendarAlt;
   faMessage = faMailBulk;
 
 }

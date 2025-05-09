@@ -10,6 +10,7 @@
         @for(link of links; track $index) {
           <a appAnimateOnScroll animationClass="slide-left" 
             [href]="'#'+link.anchor" 
+            [ngClass]="{'text-blue-600': isLinkActive(link.anchor)}"
             class="hover:text-blue-600 slide-left"
             [delay]="700 + (link.id * 100)">
           <!-- >{{link.name}}</a> -->

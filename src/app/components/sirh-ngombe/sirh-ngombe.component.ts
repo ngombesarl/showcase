@@ -28,7 +28,7 @@ export class SirhNgombeComponent {
       id: 3,
       title: "INTÉGRATION",
       description: "Optimisez l'intégration de vos collaborateurs grâce à des processus fluides et efficaces.",
-      image: "images/integration.jpg",
+      image: "images/hands-together2.jpg",
       alt: "Integration"
     },
     {
