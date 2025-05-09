@@ -9,6 +9,7 @@ import { SirhNgombeComponent } from "../sirh-ngombe/sirh-ngombe.component";
 import { FeaturesComponent } from "../features/features.component";
 import { AboutUsComponent } from "../about-us/about-us.component";
 import { AnimateOnScrollDirective } from "../../directives/animate-on-scroll.directive";
+import { ContactComponent } from "../contact/contact.component";
 
 @Component({
   selector: 'app-landing',
@@ -23,7 +24,8 @@ import { AnimateOnScrollDirective } from "../../directives/animate-on-scroll.dir
     SirhNgombeComponent,
     FeaturesComponent,
     AboutUsComponent,
-    AnimateOnScrollDirective
+    AnimateOnScrollDirective,
+    ContactComponent
 ],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss'

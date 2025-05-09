@@ -40,13 +40,13 @@ export class HeaderComponent implements OnInit{
 
   checkActiveSection(): void {
     const scrollPosition = window.scrollY + (window.innerHeight / 3); // Adjust offset as needed
-
     this.links.forEach(link => {
-      const section = document.getElementById(link.anchor);
+      let section: HTMLElement | null = null;
+      section = document.getElementById(link.anchor); 
       if (section) {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
-
+  
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
           this.activeSection = link.anchor;
         }
