@@ -1,20 +1,51 @@
-<section id="digital-payment" class="py-20 bg-gray-50">
+<section id="digital-payment" class="py-20 fade-in"
+         appAnimateOnScroll animationClass="fade-in">
     <div class="container px-6 mx-auto text-center lg:px-20">
-      <h2 class="text-4xl font-bold uppercase text-primary">Propriétaire et Fournisseur de solution de paiement digitaux</h2>
-      <p class="mt-4 text-lg text-gray-600">
+      <h2 class="text-3xl font-bold uppercase xs:text-4xl text-primary slide-down"
+          appAnimateOnScroll animationClass="slide-down"
+          [delay]="100">Propriétaire et Fournisseur de solution de paiement digitaux</h2>
+      <p class="mt-4 text-lg text-gray-600 slide-up"
+         appAnimateOnScroll animationClass="slide-up"
+         [delay]="200">
         Découvrez nos solutions avancées pour gérer vos paiements et transactions électroniques de manière sécurisée et efficace.
       </p>
-      
       <div class="grid grid-cols-1 gap-8 mt-12 md:grid-cols-2 lg:grid-cols-3">
        @for(service of services; track service){
-        <div class="p-6 transition-shadow duration-300 bg-white rounded-lg shadow-lg hover:shadow-xl">
-            <div class="flex items-center justify-center w-12 h-12 text-white rounded-full bg-lime-500">
-                <fa-icon [icon]="service.icon" class="w-6 h-6"></fa-icon>
+        <div class="flex flex-col items-start p-10 transition-shadow duration-300 bg-gray-200 hover:shadow-xl zoom-in-item"
+             appAnimateOnScroll animationClass="zoom-in-item"
+             [delay]="300 + ($index * 150)">
+            <div class="flex items-center justify-start w-full gap-4 text-white">
+                <img [alt]="service.title" [src]="service.image" class="w-8 h-8" />
+                <h4 class="text-xl font-semibold text-gray-600 text-start">{{ service.title }}</h4>
             </div>
-            <h4 class="text-xl font-semibold text-primary">{{ service.title }}</h4>
-            <p class="mt-2 text-gray-600">{{ service.description }}</p>
+            <p class="mt-2 text-gray-600 text-start">{{ service.description }}</p>
           </div>
        }
       </div>
+    </div>
+  </section>
+  <section class="container flex flex-col-reverse w-full gap-4 px-6 mx-auto lg:px-20 cta md:flex-row fade-in"
+           appAnimateOnScroll animationClass="fade-in"
+           [delay]="500">
+    <div class="flex flex-col items-center justify-center space-y-4 lg:w-1/2 slide-right"
+         appAnimateOnScroll animationClass="slide-right"
+         [delay]="600">
+      <h2 class="text-2xl font-semibold text-primary">Etes vous prêt a transformer votre entreprise?</h2>
+      <p class="items-start w-full mt-4 text-lg text-gray-600 text-start">
+        Avec <strong>NGOMBE SARL</strong> ouvrez la porte à de nouvelle opportunités  et faites passer votre entreprise au niveau superieur.
+      </p>
+      <a aria-details="contact us anchor" href="#contact" target="_blank" class="px-6 py-4 text-white rounded-full shadow-md bg-sky-500 hover:bg-sky-600 slide-up"
+              appAnimateOnScroll animationClass="slide-up"
+              [delay]="700">
+        Commencez
+    </a>
+    </div>
+
+    <div class="flex flex-col items-start space-y-4 lg:w-1/2 slide-left"
+         appAnimateOnScroll animationClass="slide-left"
+         [delay]="800">
+      <img src="images/Entreprise-africaine.jpg" alt="Autres fonctionnalités" class="object-cover w-full h-auto z-5 rounded-xl zoom-in"
+           appAnimateOnScroll animationClass="zoom-in"
+           [delay]="900"/>
     </div>
   </section>

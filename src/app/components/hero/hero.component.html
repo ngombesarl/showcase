@@ -1,0 +1,76 @@
+<div>
+  <div class="relative flex flex-col w-full pt-6 fade-in"
+       appAnimateOnScroll animationClass="fade-in">
+      <div class="flex flex-col-reverse items-center justify-between px-6 md:gap-10 md:px-20 md:flex-row">
+        <div class="flex flex-col items-center w-full text-center md:items-start md:w-1/2 md:text-left slide-right"
+             appAnimateOnScroll animationClass="slide-right"
+             [delay]="300">
+          <h1 class="text-3xl md:text-5xl hero:text-6xl font-bold text-[#00B2FF] leading-tight slide-down-item"
+              appAnimateOnScroll animationClass="slide-down-item"
+              [delay]="400">
+            L'EXPERTISE
+            D'INGENIERIE DES
+            PROCESSUS
+            D'AFFAIRES
+          </h1>
+          <a href="#services" class="mt-3 w-fit uppercase bg-[#00B2FF] hover:bg-[#009edd] px-6 py-3 text-white font-semibold rounded-full shadow-md transition-all duration-300 slide-up-item"
+             appAnimateOnScroll animationClass="slide-up-item"
+             [delay]="500">
+            EXPLOREZ NOS SERVICES
+          </a>
+        </div>
+
+        <div class="relative md:w-1/2 slide-left"
+             appAnimateOnScroll animationClass="slide-left"
+             [delay]="600">
+          <img src="images/lovely-teenage-girl-with-curly-hair-posing-yellow-tshirt-min 1.png" alt="Student" class="rounded-lg mx-auto w-[360px] object-contain zoom-in"
+               appAnimateOnScroll animationClass="zoom-in"
+               [delay]="700"/>
+
+          <div class="feature-tag absolute top-[15%] right-0 md:right-8 bg-white shadow-lg rounded-md px-4 py-4 flex items-center gap-2 fade-in-item"
+               appAnimateOnScroll animationClass="fade-in-item"
+               [delay]="800">
+               <span class="flex items-center justify-center w-8 h-8 text-lg text-white rounded-md shadow-lg bg-primary">
+                <fa-icon [icon]="faProcessus"></fa-icon>
+                </span>
+                <!-- <img src="icons/stats.svg" class="w-12 h-12" />     -->
+                <span class="text-sm font-medium">PROCESSUS</span>
+          </div>
+
+          <div class="feature-tag absolute top-[35%] left-0 bg-white shadow-lg rounded-md px-4 py-4 flex items-center gap-2 fade-in-item"
+               appAnimateOnScroll animationClass="fade-in-item"
+               [delay]="900">
+               <span class="flex items-center justify-center w-8 h-8 text-lg text-white bg-green-500 rounded-full shadow-lg">
+                <fa-icon [icon]="faIng"></fa-icon>
+                </span>
+                <!-- <img src="icons/check.svg" class="w-6 h-6" /> -->
+            <span class="text-sm font-medium">INGÉNIERIE</span>
+          </div>
+
+          <div class="feature-tag absolute bottom-[20%] left-0 bg-white shadow-lg rounded-md px-4 py-4 flex items-center gap-2 fade-in-item"
+               appAnimateOnScroll animationClass="fade-in-item"
+               [delay]="1000">
+            <!-- <img src="icons/calendar.svg" class="w-6 h-6" /> -->
+            <span class="flex items-center justify-center w-8 h-8 text-lg text-white rounded-md shadow-lg bg-primary">
+              <fa-icon [icon]="faSirh"></fa-icon>
+              </span>
+            <span class="text-sm font-medium">SIRH NGOMBE</span>
+          </div>
+
+          <div class="feature-tag absolute bottom-[30%] right-0 bg-white shadow-lg rounded-md px-4 py-4 flex items-center gap-2 fade-in-item"
+               appAnimateOnScroll animationClass="fade-in-item"
+               [delay]="1100">
+            <!-- <img src="icons/mail.svg" class="w-6 h-6" />
+              -->
+              <span class="flex items-center justify-center w-8 h-8 text-lg text-white rounded-md shadow-lg bg-primary">
+                <fa-icon [icon]="faMessage"></fa-icon>
+                </span>
+            <span class="text-sm font-medium">SOLUTION DIGITALE</span>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-0 block w-full h-20 mt-2 md:hidden bg-primary"></div>
+      <div class="absolute hidden w-full h-20 -bottom-10 hero:-bottom-8 bg-primary md:block"></div>
+  </div>
+
+</div>

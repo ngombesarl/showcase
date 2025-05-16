@@ -1,23 +1,25 @@
 import { Component } from '@angular/core';
+import { FormsModule } from "@angular/forms";
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [],
-  template: `
-    <footer class="bg-blue-600 text-white py-8">
-    <div class="container mx-auto text-center">
-      <img src="logos/ngombe.jpg" alt="Ngombe SARL" class="h-10 mx-auto mb-4">
-      <div>
-        <p>NGOMBE SARL</p>
-        <p>Nous et le plus grand nombre</p>
-      </div>
-      <p>&copy; 2024 Ngombe SARL. Tous droits réservés.</p>
-    </div>
-  </footer>
-  `,
+  imports: [FormsModule],
+  templateUrl: `footer.component.html`,
   styles: ``
 })
 export class FooterComponent {
 
+  email: string = '';
+
+  subscribe() {
+    if (this.email) {
+      console.log('Subscribing with email:', this.email);
+      // In a real application, you would send this email to your backend
+      alert(`Merci de vous être abonné avec l'email : ${this.email}`);
+      this.email = ''; // Clear the input after submission
+    } else {
+      alert('Veuillez entrer votre adresse email.');
+    }
+  }
 }

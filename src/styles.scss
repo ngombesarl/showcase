@@ -7,8 +7,9 @@
 // @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 body {
   // font-family: 'Poppins', sans-serif;
-  font-family: 'Times New Roman', Times, serif;
+  // font-family: 'Times New Roman', Times, serif;
   scroll-behavior: smooth;
+  // overflow-x: hidden;
 }
 * {
   scroll-behavior: smooth;
@@ -104,3 +105,63 @@ background: black;
   width: 50%;
 }
 
+
+
+/* _animations.scss */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-left {
+  transform: translateX(50px);
+  opacity: 0;
+  transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+
+  &.active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-right {
+  transform: translateX(-50px);
+  opacity: 0;
+  transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+
+  &.active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.zoom-in {
+  transform: scale(0.8);
+  opacity: 0;
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+
+  &.active {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.slide-bottom {
+  transform: translateY(50px);
+  opacity: 0;
+  transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+
+  &.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Add more animation styles as needed */

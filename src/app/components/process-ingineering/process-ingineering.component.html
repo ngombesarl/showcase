@@ -1,0 +1,38 @@
+<div class="flex flex-col items-center justify-center w-full py-12 bg-white">
+    <!-- title -->
+    <h1 class="text-3xl  md:text-4xl mb-4 text-center font-bold text-[#00B2FF] leading-tight">
+        INGENIERIE DES PROCESSUS D'AFFAIRES
+    </h1>
+    <!-- description -->
+    <p class="mb-2 text-center text-terciary sm:max-w-2/3">
+        Découvrez nos solutions complètes pour l'ingénierie des processus d'affaires et la transformation de votre entreprise
+    </p>
+
+    <!-- Items -->
+    <!-- <div class="flex flex-wrap items-center justify-center w-full gap-2 p-4">
+        @for(process of processingSteps | slice: 0 : 3; track process.id) {
+            <div class="relative flex flex-col max-w-sm p-10 transition border-t rounded-md shadow-md duration-5 border-thin 00 border-primary hover:scale-105">
+                <span class="absolute flex items-center justify-center w-10 h-10 p-4 text-center text-white rounded-full -top-4 left-1/2" [class]="process.bgClass">
+                    <fa-icon [icon]="process.icon"> </fa-icon>
+                </span>
+                <p class="font-medium text-center text-blueish">{{process.description}}</p>
+            </div>
+        }
+        
+    </div> -->
+
+    <div #scrollableContainer class="w-full p-4 scrollable-container">
+      <div class="flex items-stretch justify-start gap-2 flex-nowrap">
+        @for(process of processingSteps; track process.id) {
+          <div class="relative flex flex-col flex-shrink-0 max-w-sm p-10 transition border-t rounded-md shadow-md duration-5 border-thin 00 border-primary hover:scale-105">
+            <span class="absolute flex items-center justify-center w-10 h-10 p-4 text-center text-white rounded-full -top-4 left-1/2" [class]="process.bgClass">
+              <fa-icon [icon]="process.icon"> </fa-icon>
+            </span>
+            <p class="font-medium text-center text-blueish">{{process.description}}</p>
+          </div>
+        }
+      </div>
+    </div>
+    
+
+</div>

@@ -1,25 +1,32 @@
-<header class="bg-primary text-white sticky top-0 z-50">
-    <div class="desktop-menu hidden container   mx-auto md:flex justify-between items-center p-4">
+<header class="sticky top-0 z-50 bg-white shadow-lg " >
+    <div class="container items-center justify-between hidden p-4 mx-auto desktop-menu md:flex fade-in"
+    appAnimateOnScroll animationClass="fade-in-item"
+    [delay]="600">
       <a href="/" class="flex items-center">
         <img src="logos/ngombe.jpg" alt="Ngombe SARL" class="h-12 mr-4">
-        <h1 class="text-3xl font-bold">Ngombe SARL</h1>
+        <!-- <h1 class="text-3xl font-bold">Ngombe SARL</h1> -->
       </a>
       <nav class="space-x-6">
         @for(link of links; track $index) {
-          <a [href]="'#'+link.anchor" class="font-bold hover:text-blue-600">{{link.name}}</a>
+          <a appAnimateOnScroll animationClass="slide-left" 
+            [href]="'#'+link.anchor" 
+            [ngClass]="{'text-blue-600': isLinkActive(link.anchor)}"
+            class="hover:text-blue-600 slide-left"
+            [delay]="700 + (link.id * 100)">
+          <!-- >{{link.name}}</a> -->
+          {{link.name}}</a>
         }
       </nav>
     </div>
 
-    <div class="fixed left-0 top-4 z-50 md:hidden w-full flex items-center justify-between px-8">
-      <!-- <div class="w-[70px] h-[70px] rounded-full"> -->
+    <div class="fixed left-0 z-50 flex items-center justify-between w-full px-10 shadow-lg top-4 md:hidden">
       <a href="/" class="w-[70px] h-[70px]">
-        <img src="logos/ngombe.jpg" alt="logo ngombe" [ngClass]="{'hidden' : isOpen}" class="w-full h-full rounded-full object-cover">
+        <img src="logos/ngombe.jpg" alt="logo ngombe" [ngClass]="{'hidden' : isOpen}" class="object-cover w-full h-full">
       </a>
-      <div class="bg-white rounded-full">
+      <div class="bg-white">
         <button 
         (click)="toggleSidebar()"
-        class="hamburger menu-btn-side bg-black" 
+        class="bg-black hamburger menu-btn-side" 
         [ngClass]="{'open' : isOpen}"
         id="menu-btn-side">
         <span class="hamburger-top"></span>
@@ -29,17 +36,19 @@
       </div>
     </div>
 
-    <sidebar 
-      class="capitalize z-40 mobile-menu fixed right-0 top-0 flex flex-col items-center pt-8 h-screen w-[90vw] sm:w-[70vw] bg-blue-500/50 backdrop-blur-md transition-transform duration-1000" 
-      [ngClass]="{'translate-x-0': isOpen, 'translate-x-full': !isOpen}"
-    > 
-      <div class="w-[70px] h-[70px]">
-        <img src="logos/ngombe.jpg" alt="logo ngombe" [ngClass]="{'hidden' : !isOpen}" class="w-full h-full rounded-full object-cover">
+    <div
+      class="fixed top-0 right-0 z-40 w-full h-full overflow-hidden transition duration-700 origin-top-right bg-white shadow-lg rounded-bl-md"
+      [ngClass]="{'scale-100 translate-x-0 translate-y-0 opacity-100 rounded-full': isOpen, 'scale-0 translate-x-full -translate-y-full opacity-0 ': !isOpen}"
+    >
+      <div class="flex flex-col items-center justify-center gap-4 py-8">
+        <div class="w-[70px] h-[70px]">
+          <img src="logos/ngombe.jpg" alt="logo ngombe" class="object-cover w-full h-full rounded-full">
+        </div>
+        <nav class="flex flex-col items-center justify-center w-full gap-4 mt-4">
+          @for(link of links; track $index) {
+            <a (click)="toggleSidebar()" [href]="'#'+link.anchor" class="text-2xl hover:text-blue-600">{{link.name}}</a>
+          }
+        </nav>
       </div>
-      <nav class="flex flex-col w-full justify-center items-center mt-8 gap-4">
-        @for(link of links; track $index) {
-          <a (click)="toggleSidebar()" [href]="'#'+link.anchor" class="hover:text-blue-300 text-4xl">{{link.name}}</a>
-        }
-      </nav>
-  </sidebar>
+    </div>
   </header>
