@@ -40,7 +40,7 @@ module.exports = {
           '600': '#006ab8',
           '700': '#005299',
           '800': '#003a7a',
-          '900': '#00225c',
+          '900': '#00225c' ,
           '950': '#00143a',
           DEFAULT: '#00b2fa', // Keep your original primary as the default, but now you have shades
         },
