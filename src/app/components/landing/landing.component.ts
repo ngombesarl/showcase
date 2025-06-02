@@ -10,6 +10,7 @@ import { FeaturesComponent } from "../features/features.component";
 import { AboutUsComponent } from "../about-us/about-us.component";
 import { AnimateOnScrollDirective } from "../../directives/animate-on-scroll.directive";
 import { ContactComponent } from "../contact/contact.component";
+import { LamainServiceComponent } from "../lamain-service/lamain-service.component";
 
 @Component({
   selector: 'app-landing',
@@ -25,7 +26,8 @@ import { ContactComponent } from "../contact/contact.component";
     FeaturesComponent,
     AboutUsComponent,
     AnimateOnScrollDirective,
-    ContactComponent
+    ContactComponent,
+    LamainServiceComponent
 ],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss'

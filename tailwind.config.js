@@ -30,6 +30,20 @@ module.exports = {
       },
       colors: {
         primary: '#00b2fa',
+        primary: {
+          '50': '#e0f7fa',
+          '100': '#b3e0f2',
+          '200': '#80c8eb',
+          '300': '#4dafe4',
+          '400': '#1a97dd',
+          '500': '#0080d6', // Close to your original #00b2fa, slightly adjusted for better gradient
+          '600': '#006ab8',
+          '700': '#005299',
+          '800': '#003a7a',
+          '900': '#00225c',
+          '950': '#00143a',
+          DEFAULT: '#00b2fa', // Keep your original primary as the default, but now you have shades
+        },
         chartColor: '#05bdfa',
         initial: '#00AEEF', 
         secondary: '#f5f5f5',

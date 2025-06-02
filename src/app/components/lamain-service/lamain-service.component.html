@@ -1,0 +1,85 @@
+<section class="relative py-16 overflow-hidden bg-gray-100 md:py-24" aria-labelledby="lamain-service-heading">
+    <div class="container px-4 mx-auto sm:px-6 lg:px-8">
+      <div class="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
+  
+        <div class="relative min-h-[400px] flex items-center justify-center slide-left"
+             appAnimateOnScroll animationClass="slide-left"
+             [delay]="100">
+          <div class="relative group w-full h-[400px] md:h-[550px] rounded-2xl shadow-2xl overflow-hidden transform rotate-3 hover:rotate-0 transition-transform duration-500 ease-out zoom-in"
+               appAnimateOnScroll animationClass="zoom-in"
+               [delay]="200">
+            <img src="images/main-repairing-laptop.jpg"
+                 alt="Lamain Service: Expert in maintenance and repair across various domains."
+                 class="absolute inset-0 object-cover w-full h-full"
+                 width="800" height="600" loading="lazy">
+            <div class="absolute inset-0 transition-opacity duration-300 bg-primary-900 opacity-40 group-hover:opacity-60"></div>
+            </div>
+  
+          <div class="absolute hidden w-32 h-32 rounded-lg -top-8 left-1/4 bg-primary-600 rotate-12 opacity-80 md:block fade-in"
+               appAnimateOnScroll animationClass="fade-in"
+               [delay]="300">
+                <img src="logos/lamain-bg.png" class="w-full h-full" alt="lamain service logo">
+            </div>
+          <div class="absolute hidden w-40 h-40 bg-orange-500 rounded-full -bottom-10 left-3/4 opacity-70 md:block fade-in"
+               appAnimateOnScroll animationClass="fade-in"
+               [delay]="400">
+               <img src="logos/lamain-bg.png" class="w-full h-full" alt="lamain service logo">
+
+            </div>
+        </div>
+  
+        <div class="flex flex-col items-center text-center lg:items-start lg:text-left slide-right"
+             appAnimateOnScroll animationClass="slide-right"
+             [delay]="500">
+          <h2 id="lamain-service-heading"
+              class="text-4xl font-extrabold leading-tight text-gray-900 sm:text-5xl fade-in"
+              appAnimateOnScroll animationClass="fade-in"
+              [delay]="600">
+            <span class="block text-orange-600 drop-shadow-md">LAMAIN</span>
+            <span class="block text-primary-800 drop-shadow-md">SERVICE</span>
+          </h2>
+          <p class="max-w-xl mt-4 text-xl text-gray-700 slide-up"
+             appAnimateOnScroll animationClass="slide-up"
+             [delay]="700">
+            La maintenance à portée de main ! Votre partenaire de confiance pour tous vos besoins techniques.
+          </p>
+  
+          <h3 class="mt-10 text-3xl font-bold text-orange-600 slide-left"
+              appAnimateOnScroll animationClass="slide-left"
+              [delay]="800">
+            Nos services clés
+          </h3>
+          <ul class="grid grid-cols-1 p-0 mt-6 text-lg text-gray-800 list-none sm:grid-cols-2 gap-x-8 gap-y-4">
+            @for (service of services; track service.id) {
+              <li class="flex items-center gap-3 fade-in"
+                  appAnimateOnScroll animationClass="fade-in"
+                  [delay]="900 + (service.id * 70)">
+                <svg class="flex-shrink-0 w-6 h-6 text-orange-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-start">{{ service.name }}</span>
+              </li>
+            }
+          </ul>
+  
+          <div class="flex flex-col w-full max-w-sm gap-4 mt-12 md:max-w-none sm:flex-row slide-up"
+               appAnimateOnScroll animationClass="slide-up"
+               [delay]="1300">
+            <a href="tel:+237677330122" class="flex items-center justify-center flex-1 gap-2 px-8 py-4 font-bold text-white transition-colors duration-300 rounded-lg shadow-lg bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-4 focus:ring-primary-300 focus:ring-offset-2" aria-label="Call Lamain Service for a free quote at 677 33 01 22">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+              </svg>
+              Appelez-nous !
+            </a>
+            <a href="https://facebook.com/Lamainservice" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center flex-1 gap-2 px-8 py-4 font-bold text-white transition-colors duration-300 bg-orange-500 rounded-lg shadow-lg hover:bg-orange-600 focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-offset-2" aria-label="Visit Lamain Service on Facebook for updates and offers">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.873V14.89h-2.54V12h2.54V9.796c0-2.502 1.492-3.89 3.776-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.983C18.343 21.128 22 16.991 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path>
+              </svg>
+              Facebook
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
