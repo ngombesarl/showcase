@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit{
   isOpen = false;
   activeSection: string = 'home';
   links = [
-    {id: 1, anchor: 'home',name: 'Acceuil'},
+    {id: 1, anchor: 'home',name: 'Accueil'},
     {id: 2, anchor: 'ingenierie',name: 'Ingénierie'},
     {id: 3, anchor: 'produits',name: 'Produits'},
     {id: 4, anchor: 'services',name: 'Services'},
